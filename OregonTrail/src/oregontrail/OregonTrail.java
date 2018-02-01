@@ -5,6 +5,8 @@
  */
 package oregontrail;
 
+import oregontrail.model.Occupation;
+
 /**
  *
  * @author spencer
@@ -15,7 +17,8 @@ public class OregonTrail {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+       System.out.println(Occupation.Banker.toString());
+       System.out.println(Occupation.Farmer.toString());
     }
     
 }
