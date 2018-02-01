@@ -33,7 +33,7 @@ public enum Occupation {
         this.name = name;
         this.description = description;
     }
-
+    
     @Override
     public String toString() {
         return "Occupation{" + "name=" + name + ", description=" + description + '}';
