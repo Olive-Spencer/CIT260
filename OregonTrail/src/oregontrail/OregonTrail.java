@@ -5,7 +5,10 @@
  */
 package oregontrail;
 
+import oregontrail.model.Location;
 import oregontrail.model.Occupation;
+import oregontrail.model.RegularSceneType;
+import oregontrail.model.Wagon;
 
 /**
  *
@@ -19,6 +22,27 @@ public class OregonTrail {
     public static void main(String[] args) {
        System.out.println(Occupation.Banker.toString());
        System.out.println(Occupation.Farmer.toString());
+       
+       Wagon wagon = new Wagon();
+       wagon.setItem("test wagon item");
+       wagon.setStatus("test wagon status");
+       
+       System.out.println(wagon.toString());
+       
+       RegularSceneType regularSceneType = new RegularSceneType();
+       
+       regularSceneType.setScene("test RegularSceneType Scene");
+       
+       System.out.println(regularSceneType.toString());
+       
+       Location location = new Location();
+       location.setName("test location name");
+       
+       System.out.println(location.toString());
+       
+       
+               
+       
     }
     
 }
