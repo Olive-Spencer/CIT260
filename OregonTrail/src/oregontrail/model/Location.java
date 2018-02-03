@@ -12,8 +12,6 @@ import java.util.Objects;
  * @author Coby, Spencer
  */
 public class Location {
-    private String junk;
-    private String otherjunk;
     private String name; 
 
     public Location() {
@@ -55,25 +53,6 @@ public class Location {
     @Override
     public String toString() {
         return "Location{" + "name=" + name + '}';
-    }
-    
-    
-
-    public String getJunk() {
-        return junk;
-    }
-
-    public void setJunk(String junk) {
-        this.junk = junk;
-    }
-
-    public String getOtherjunk() {
-        return otherjunk;
-    }
-
-    public void setOtherjunk(String otherjunk) {
-        this.otherjunk = "Test to see if it works";
-        this.junk = "This is also a test to see if it works";
     }
     
     

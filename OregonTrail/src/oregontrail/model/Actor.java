@@ -18,6 +18,9 @@ public class Actor implements Serializable {
     private String currentHealth;
     private String status;
 
+    public Actor() {
+    }
+
     public String getName() {
         return name;
     }
