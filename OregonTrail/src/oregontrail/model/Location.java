@@ -12,6 +12,7 @@ import java.util.Objects;
  * @author Coby, Spencer
  */
 public class Location {
+
     private String name; 
 
     public Location() {
