@@ -10,15 +10,18 @@ import java.util.Objects;
  */
 public class Map implements Serializable {
     
-    private Location currentLocation;
+    private String currentLocation;
     private ArrayList<String> checkpointNames = new ArrayList<String>();
-    private ArrayList<Location> checkpoints = new ArrayList<Location>();
+    private ArrayList<String> checkpoints = new ArrayList<String>();
 
-    public Location getCurrentLocation() {
+    public Map() {
+    }
+
+    public String getCurrentLocation() {
         return currentLocation;
     }
 
-    public void setCurrentLocation(Location currentLocation) {
+    public void setCurrentLocation(String currentLocation) {
         this.currentLocation = currentLocation;
     }
 
@@ -30,15 +33,15 @@ public class Map implements Serializable {
         this.checkpointNames = checkpointNames;
     }
 
-    public ArrayList<Location> getCheckpoints() {
+    public ArrayList<String> getCheckpoints() {
         return checkpoints;
     }
 
-    public void setCheckpoints(ArrayList<Location> checkpoints) {
+    public void setCheckpoints(ArrayList<String> checkpoints) {
         this.checkpoints = checkpoints;
     }
 
-    public Map(Location currentLocation) {
+    public Map(String currentLocation) {
         this.currentLocation = currentLocation;
     }
 
