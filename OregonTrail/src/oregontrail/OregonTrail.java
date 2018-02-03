@@ -5,8 +5,10 @@
  */
 package oregontrail;
 
+import oregontrail.model.Game;
 import oregontrail.model.Location;
 import oregontrail.model.Occupation;
+import oregontrail.model.Player;
 import oregontrail.model.RegularSceneType;
 import oregontrail.model.Wagon;
 
@@ -40,8 +42,19 @@ public class OregonTrail {
        
        System.out.println(location.toString());
        
+       Player playerOne = new Player();
+       playerOne.setName("Jim Bean");
+       playerOne.setHighScore(15);
+      
+       System.out.println(playerOne.toString());
        
-               
+       Game testGame = new Game();
+       testGame.setActorCount(5);
+       testGame.setLocation("test Location");
+       testGame.setPlayersName("Micky Mouse");
+       
+       System.out.println(testGame.toString());
+       
     }
     
 }
