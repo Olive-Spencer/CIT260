@@ -41,7 +41,7 @@ double randomNumber = rand.nextInt(10);
 if (randomNumber < 0 || randomNumber > 10){
     return -1;
 }
-        
+//the random number has been replaced with the first 10 below for test purposes.        
 double weatherStatus = locationCondition + weatherMonth + (10/ 10);
 
  return weatherStatus;
