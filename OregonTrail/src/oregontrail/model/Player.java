@@ -16,6 +16,7 @@ public class Player implements Serializable {
    private String name;
    private double highScore;
    private ArrayList<Game> games = new ArrayList<Game>();
+  
    
 //constructor
 

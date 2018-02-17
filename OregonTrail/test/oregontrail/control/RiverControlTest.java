@@ -89,5 +89,64 @@ public class RiverControlTest {
         
         
     }
+
+    /**
+     * Test of calcDepth method, of class RiverControl.
+     */
+    @Test
+    public void testCalcDepth() {
+    System.out.println("calcDepth");
+    
+        System.out.println("valid test case 1");
+        int month = 5;
+        int previousRiverDepth = 2;
+        double expResult = 13;
+        double result = RiverControl.calcDepth(month, previousRiverDepth);
+        assertEquals(expResult, result, 0.0);
+        
+       System.out.println("invalid test case 1");
+       month = 12;
+       previousRiverDepth = 1;
+       expResult = -1;
+       result = RiverControl.calcDepth(month, previousRiverDepth);
+       assertEquals(expResult, result, 0.0);
+       
+       System.out.println("invalid test case 2");
+       month = 5;
+       previousRiverDepth = 8;
+       expResult = -1;
+       result = RiverControl.calcDepth(month, previousRiverDepth);
+       assertEquals(expResult, result, 0.0);
+       
+       System.out.println("invalid test case 3");
+       month = 14;
+       previousRiverDepth = 6;
+       expResult = -1;
+       result = RiverControl.calcDepth(month, previousRiverDepth);
+       assertEquals(expResult, result, 0.0);
+       
+       System.out.println("Boundry test case 1");
+       month = 0;
+       previousRiverDepth = 0;
+       expResult = 2 ;
+       result = RiverControl.calcDepth(month, previousRiverDepth);
+       assertEquals(expResult, result, 0.0);
+       
+       System.out.println("Boundry test case 2");
+       month = 4;
+       previousRiverDepth = 2;
+       expResult = 6;
+       result = RiverControl.calcDepth(month, previousRiverDepth);
+       assertEquals(expResult, result, 0.0);
+       
+       System.out.println("Boundry test case 3");
+       month = 5;
+       previousRiverDepth = 2;
+       expResult = 13;
+       result = RiverControl.calcDepth(month, previousRiverDepth);
+       assertEquals(expResult, result, 0.0);
+       
+      
+    }
     
 }
