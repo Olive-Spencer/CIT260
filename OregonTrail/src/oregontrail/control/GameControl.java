@@ -5,10 +5,23 @@
  */
 package oregontrail.control;
 
+import oregontrail.model.Player;
+
 /**
  *
  * @author spencer
  */
 public class GameControl {
+    public static Player savePlayer(String name){
+        if (name == null || name.length() < 1){
+            return null;
+        }
+        Player player = new Player();
+        player.setName(name);
+        return player;
+    }
     
+    public static void createNewGame(Player player){
+        System.out.println("createNewGame() called");
+    }
 }
