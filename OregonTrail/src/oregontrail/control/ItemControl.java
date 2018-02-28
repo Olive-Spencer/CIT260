@@ -11,11 +11,11 @@ package oregontrail.control;
  */
 public class ItemControl {
     public static void getCurrentClothes(){
-        System.out.println("getCurrentClothes() called.");
+        System.out.println("Called getCurrentClothes in ItemControl");
     }
     public static void setCurrentClothes(int amount){
-        System.out.println("setCurrentClothes() called.");
-        System.out.println("amount variable value is:" + amount);
+        System.out.println("Called setCurrentClothes() in ItemControl");
+        System.out.println("amount is:" + amount);
     }
     
 }
