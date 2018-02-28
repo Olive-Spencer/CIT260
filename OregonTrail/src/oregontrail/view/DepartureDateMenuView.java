@@ -14,7 +14,7 @@ import java.util.Scanner;
 
 public class DepartureDateMenuView {
         public void display(){
-            boolean endOfView = false;
+            boolean endOfView;
         do{
             String[] inputs = new String[1];
             inputs[0] = this.getInputs();
@@ -32,7 +32,7 @@ public class DepartureDateMenuView {
         Scanner inFile;
         inFile = new Scanner(System.in);
         boolean valid = false;
-        String newInputs = null;
+        String adjustedInputs = null;
         System.out.println("The year time of year you choose to leave is very important! Choose wisely!");
         System.out.println("1 - March");
         System.out.println("2 - April");
@@ -48,22 +48,23 @@ public class DepartureDateMenuView {
             if (inputsLength < 1)
             {
                 System.out.println("Invalid value entered");
-                continue;
+                
             }
             else
             {
                 valid = true;
-                newInputs = inputs.trim().toUpperCase();
+                adjustedInputs = inputs.trim().toUpperCase();
                 
             }
         }
-        return newInputs;
+        return adjustedInputs;
 
     
     }
 
     private boolean doAction(String[] inputs) {
         String menuItem = inputs[0];
+        
         switch (menuItem)
         {
             case "1": System.out.println("You have chosen to leave in March!");
@@ -79,7 +80,23 @@ public class DepartureDateMenuView {
             case "Q": return true;
             default: System.out.println("Invalid menu item");
         }
+        System.out.println("are you ok with leaving at this time? y/n");
+        Scanner inFile;
+        inFile = new Scanner(System.in);
+        String confirmation = inFile.nextLine();
+        String adjustConfirm;
+        adjustConfirm = confirmation.trim().toUpperCase();
+                
+        switch (adjustConfirm)
+        {
+            case "Y": return true;
+            case "N": return false;
+            default: break;
+                               
+    }
         return false;
+        
+       
     }
 }
     

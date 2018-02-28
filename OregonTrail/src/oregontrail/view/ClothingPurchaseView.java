@@ -16,7 +16,7 @@ public class ClothingPurchaseView {
     
         
         public void display() {
-        boolean endOfView = false;
+        boolean endOfView;
         do{
             String[] inputs = new String[1];
             inputs[0] = this.getInputs();
@@ -45,7 +45,6 @@ public class ClothingPurchaseView {
             if (inputsLength < 1)
             {
                 System.out.println("You must enter a non-blank value.");
-                continue;
             }
             else
             {
@@ -87,7 +86,6 @@ public class ClothingPurchaseView {
                 else 
                 {
                     System.out.println("Please enter a valid value.");
-                    continue;
                 }
             }
             return true;
