@@ -33,6 +33,12 @@ public class MainMenuView {
         GameMenuView gameMenuView = new GameMenuView();
         gameMenuView.display();
     }
+    
+    private static void shopMenu(){
+        ShopMenuView shopMenuView = new ShopMenuView();
+        shopMenuView.display();
+    }
+    
     public void display(){
         boolean endOfView = false;
         do{
@@ -56,6 +62,7 @@ public class MainMenuView {
             System.out.println("N - Start new game");
             System.out.println("R - Restart existing game");
             System.out.println("H - Get help on how to play the game");
+            System.out.println("S - Shop menu test");
             System.out.println("Q - Quit");
             while(valid == false)
             {
@@ -87,6 +94,7 @@ public class MainMenuView {
                 break;
                 case "H": getHelp();
                 break;
+                case "S": shopMenu();
                 case "Q": return true;
                 default: System.out.println("Invalid menu item");                
             }

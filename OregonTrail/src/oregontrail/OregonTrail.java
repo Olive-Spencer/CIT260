@@ -16,6 +16,7 @@ import oregontrail.model.RegularSceneType;
 import oregontrail.model.Wagon;
 import oregontrail.view.StartProgramView;
 import oregontrail.view.MainMenuView;
+import oregontrail.view.ShopMenuView;
 
 /**
  *
