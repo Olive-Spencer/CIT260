@@ -14,6 +14,9 @@ import oregontrail.model.Occupation;
 import oregontrail.model.Player;
 import oregontrail.model.RegularSceneType;
 import oregontrail.model.Wagon;
+import oregontrail.view.BuyingFoodView;
+import oregontrail.view.ClothingPurchaseView;
+import oregontrail.view.DepartureDateMenuView;
 import oregontrail.view.StartProgramView;
 import oregontrail.view.MainMenuView;
 import oregontrail.view.ShopMenuView;
@@ -27,11 +30,17 @@ public class OregonTrail {
     private static Player player = null;
 
     public static void main(String[] args) {
+        
+         
+       ClothingPurchaseView clothingPurchaseView = new ClothingPurchaseView(); 
+       clothingPurchaseView.display();
+       
        StartProgramView startProgramView = new StartProgramView();
        MainMenuView mainMenuView = new MainMenuView();
        startProgramView.display();
        mainMenuView.display();
-       OregonTrail.setPlayer(player);
+       OregonTrail.setPlayer(player);    
+       
        
     }
 
