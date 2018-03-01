@@ -17,11 +17,11 @@ import oregontrail.model.Wagon;
 import oregontrail.view.BuyingFoodView;
 import oregontrail.view.ClothingPurchaseView;
 import oregontrail.view.DepartureDateMenuView;
+import oregontrail.view.GoldPanningView;
 import oregontrail.view.StartProgramView;
 import oregontrail.view.MainMenuView;
-import oregontrail.view.ShopMenuView;
 import oregontrail.view.OccupationsView;
-import oregontrail.view.GoldPanningView;
+import oregontrail.view.ShopMenuView;
 
 /**
  *
@@ -33,13 +33,19 @@ public class OregonTrail {
 
     public static void main(String[] args) {
        
+       //Commented out Spencer's classes to make mine work for the submission.
        //System.out.println("Departure Date Menu View: ");
        //DepartureDateMenuView departureDateMenuView = new DepartureDateMenuView();
        //departureDateMenuView.display();
        //System.out.println("clothingPurchaseView: ");
        //ClothingPurchaseView clothingPurchaseView = new ClothingPurchaseView();
        //clothingPurchaseView.display();
-        
+       StartProgramView startProgramView = new StartProgramView();
+       MainMenuView mainMenuView = new MainMenuView();
+       startProgramView.display();
+       mainMenuView.display();
+       OregonTrail.setPlayer(player);    
+       
        //commented out items that won't be used for this assignment
        //StartProgramView startProgramView = new StartProgramView();
        //MainMenuView mainMenuView = new MainMenuView();
