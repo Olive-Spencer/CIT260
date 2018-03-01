@@ -69,7 +69,8 @@ public class BuyingFoodView {
             newAgain = again.trim().toUpperCase();
             if (newAgain.matches("Y"))
             {
-                getInputs();
+                amount = Integer.parseInt(getInputs());
+                if(amount != (int)amount)
                 FoodControl.getCurrentFood();
                 FoodControl.setCurrentFood(amount);
             }

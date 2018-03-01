@@ -31,19 +31,18 @@ public class OregonTrail {
 
     public static void main(String[] args) {
        
-       System.out.println("Departure Date Menu View: ");
-       DepartureDateMenuView departureDateMenuView = new DepartureDateMenuView();
-       departureDateMenuView.display();
-       System.out.println("clothingPurchaseView: ");
-       ClothingPurchaseView clothingPurchaseView = new ClothingPurchaseView();
-       clothingPurchaseView.display();
-        
-       //commented out items that won't be used for this assignment
-       //StartProgramView startProgramView = new StartProgramView();
-       //MainMenuView mainMenuView = new MainMenuView();
-       //startProgramView.display();
-       //mainMenuView.display();
-       //OregonTrail.setPlayer(player);    
+       //Commented out Spencer's classes to make mine work for the submission.
+       //System.out.println("Departure Date Menu View: ");
+       //DepartureDateMenuView departureDateMenuView = new DepartureDateMenuView();
+       //departureDateMenuView.display();
+       //System.out.println("clothingPurchaseView: ");
+       //ClothingPurchaseView clothingPurchaseView = new ClothingPurchaseView();
+       //clothingPurchaseView.display();
+       StartProgramView startProgramView = new StartProgramView();
+       MainMenuView mainMenuView = new MainMenuView();
+       startProgramView.display();
+       mainMenuView.display();
+       OregonTrail.setPlayer(player);    
        
        
     }
