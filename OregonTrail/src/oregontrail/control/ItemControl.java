@@ -17,5 +17,5 @@ public class ItemControl {
         System.out.println("Called setCurrentClothes() in ItemControl");
         System.out.println("amount is:" + amount);
     }
-    
+ 
 }

@@ -20,6 +20,8 @@ import oregontrail.view.DepartureDateMenuView;
 import oregontrail.view.StartProgramView;
 import oregontrail.view.MainMenuView;
 import oregontrail.view.ShopMenuView;
+import oregontrail.view.OccupationsView;
+import oregontrail.view.GoldPanningView;
 
 /**
  *
@@ -31,12 +33,12 @@ public class OregonTrail {
 
     public static void main(String[] args) {
        
-       System.out.println("Departure Date Menu View: ");
-       DepartureDateMenuView departureDateMenuView = new DepartureDateMenuView();
-       departureDateMenuView.display();
-       System.out.println("clothingPurchaseView: ");
-       ClothingPurchaseView clothingPurchaseView = new ClothingPurchaseView();
-       clothingPurchaseView.display();
+       //System.out.println("Departure Date Menu View: ");
+       //DepartureDateMenuView departureDateMenuView = new DepartureDateMenuView();
+       //departureDateMenuView.display();
+       //System.out.println("clothingPurchaseView: ");
+       //ClothingPurchaseView clothingPurchaseView = new ClothingPurchaseView();
+       //clothingPurchaseView.display();
         
        //commented out items that won't be used for this assignment
        //StartProgramView startProgramView = new StartProgramView();
@@ -45,7 +47,12 @@ public class OregonTrail {
        //mainMenuView.display();
        //OregonTrail.setPlayer(player);    
        
-       
+       System.out.println("Occupations View: ");
+       OccupationsView occupationsView = new OccupationsView();
+       occupationsView.display();
+       System.out.println("Gold Panning View: ");
+       GoldPanningView goldPanningView = new GoldPanningView();
+       goldPanningView.display();
     }
 
     public static Game getCurrentGame() {
