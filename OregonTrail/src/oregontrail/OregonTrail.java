@@ -45,6 +45,7 @@ public class OregonTrail {
        startProgramView.display();
        mainMenuView.display();
        OregonTrail.setPlayer(player);    
+
        
        //commented out items that won't be used for this assignment
        //StartProgramView startProgramView = new StartProgramView();
@@ -52,13 +53,15 @@ public class OregonTrail {
        //startProgramView.display();
        //mainMenuView.display();
        //OregonTrail.setPlayer(player);    
+
+
        
-       System.out.println("Occupations View: ");
-       OccupationsView occupationsView = new OccupationsView();
-       occupationsView.display();
-       System.out.println("Gold Panning View: ");
-       GoldPanningView goldPanningView = new GoldPanningView();
-       goldPanningView.display();
+       //System.out.println("Occupations View: ");
+       //OccupationsView occupationsView = new OccupationsView();
+       //occupationsView.display();
+       //System.out.println("Gold Panning View: ");
+       //GoldPanningView goldPanningView = new GoldPanningView();
+       //goldPanningView.display();
     }
 
     public static Game getCurrentGame() {
