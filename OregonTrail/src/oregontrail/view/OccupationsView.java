@@ -36,7 +36,9 @@ public class OccupationsView {
         System.out.println("2 - Be a carpenter from Ohio");
         System.out.println("3 - Be a farmer from Illinois");
         System.out.println("4 - Be a blacksmith from Missouri");
-        System.out.println("5 - Be a cattle rancher from Kentucky");
+        System.out.println("5 - Be a doctor from Kentucky");
+        System.out.println("6 - Be a Bandit from Kentucky");
+        System.out.println("7 - Be a Trapper from Kentucky");
         System.out.println("Q - Quit to main menu");
         while(valid == false)
         {
@@ -61,15 +63,19 @@ public class OccupationsView {
         
         switch (menuItem)
         {
-            case "1": System.out.println("You have chosen to be a banker from Boston!");
+            case "1": System.out.println("You have chosen to be a Banker from Boston!");
             break;
-            case "2": System.out.println("You have chosen to be a carpenter from Ohio!");
+            case "2": System.out.println("You have chosen to be a Carpenter from Ohio!");
             break;
-            case "3": System.out.println("You have chosen to be a farmer from Illinois!");
+            case "3": System.out.println("You have chosen to be a Farmer from Illinois!");
             break;
-            case "4": System.out.println("You have chosen to be a blacksmith from Missouri!");
+            case "4": System.out.println("You have chosen to be a Blacksmith from Missouri!");
             break;
-            case "5": System.out.println("You have chosen to be a cattle rancher from Kentucky!");
+            case "5": System.out.println("You have chosen to be a Doctor from Kentucky!");
+            break;
+            case "6": System.out.println("You have chosen to be a Bandit!");
+            break;
+            case "7": System.out.println("You have chosen to be a Trapper!");
             break;
             case "Q": return true;
             default: System.out.println("Invalid menu item");

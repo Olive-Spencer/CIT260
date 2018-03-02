@@ -31,12 +31,13 @@ public class GoldPanningView {
         inFile = new Scanner(System.in);
         boolean valid = false;
         String panInputs = null;        
-        System.out.println("You are going to pan for Gold. It takes 3 days to pan in this area, would you like to pan? Y/N");
-        System.out.println("Press Q to Quit to main menu.");
+        System.out.println("You are going to pan for Gold. It takes 3 days to pan in this area.");
+        System.out.println("Would you like to pan? Y/N");
+        System.out.println("press Q to Quit.");
         while(valid == false)
         {
-          String answer = inFile.nextLine();
-            int inputsLength = answer.length();
+          String newInputs = inFile.nextLine();
+            int inputsLength = newInputs.length();
             if (inputsLength < 1)
             {
                 System.out.println("You must enter a valid value");
@@ -44,38 +45,27 @@ public class GoldPanningView {
             else
             {
                 valid = true;
-                panInputs = answer.trim().toUpperCase();
+                panInputs = newInputs.trim().toUpperCase();
             }
         }
         return panInputs;
     }
 
-    private boolean doAction(String[] panInputs) {
-        Scanner inFile;
-        inFile = new Scanner(System.in);
+    private boolean doAction(String[] inputs) {
+        String panChoice = inputs[0];
         
-        
-        boolean panDecision = false;
-        String answer = null;
-        
-        while (panDecision == false){
-          
-            if (answer.matches("Y"))
-            {
-                System.out.println("Congradulations, you panned for gold and found some! You sold this gold for 100 dollars!");
-               panDecision = true;
-            }
-            else if (answer.matches("N"))
-            {
-                System.out.println("Very well. Back to travel menu.");
-                panDecision = true;
-            }
-            else 
-                {
-                    System.out.println("Please enter a valid value.");
-                }
-        } 
-         return true;
+        switch (panChoice)
+        {
+            case "Y": System.out.println("Congradulations, you panned for gold and found some! You sold this gold for 100 dollars!");
+            break;
+            case "N": System.out.println("Very well. Back to travel menu.");
+            break;
+            case "Q": return true;
+            default: System.out.println("Invalid menu item");
+        }
+       
+        return false;
+    
     }
 }   
 

@@ -40,11 +40,11 @@ public class OregonTrail {
        //System.out.println("clothingPurchaseView: ");
        //ClothingPurchaseView clothingPurchaseView = new ClothingPurchaseView();
        //clothingPurchaseView.display();
-       StartProgramView startProgramView = new StartProgramView();
-       MainMenuView mainMenuView = new MainMenuView();
-       startProgramView.display();
-       mainMenuView.display();
-       OregonTrail.setPlayer(player);    
+       //StartProgramView startProgramView = new StartProgramView();
+       //MainMenuView mainMenuView = new MainMenuView();
+       //startProgramView.display();
+       //mainMenuView.display();
+       //OregonTrail.setPlayer(player);    
 
        
        //commented out items that won't be used for this assignment
@@ -59,9 +59,9 @@ public class OregonTrail {
        //System.out.println("Occupations View: ");
        //OccupationsView occupationsView = new OccupationsView();
        //occupationsView.display();
-       //System.out.println("Gold Panning View: ");
-       //GoldPanningView goldPanningView = new GoldPanningView();
-       //goldPanningView.display();
+       System.out.println("Gold Panning View: ");
+       GoldPanningView goldPanningView = new GoldPanningView();
+       goldPanningView.display();
     }
 
     public static Game getCurrentGame() {
