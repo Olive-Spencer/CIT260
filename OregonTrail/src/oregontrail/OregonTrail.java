@@ -22,6 +22,7 @@ import oregontrail.view.StartProgramView;
 import oregontrail.view.MainMenuView;
 import oregontrail.view.OccupationsView;
 import oregontrail.view.ShopMenuView;
+import oregontrail.view.HelpMenuView;
 
 /**
  *
@@ -37,27 +38,32 @@ public class OregonTrail {
        System.out.println("Departure Date Menu View: ");
        DepartureDateMenuView departureDateMenuView = new DepartureDateMenuView();
        departureDateMenuView.display();
-       System.out.println("clothingPurchaseView: ");
+       System.out.println("ClothingPurchaseView: ");
        ClothingPurchaseView clothingPurchaseView = new ClothingPurchaseView();
        clothingPurchaseView.display();
+       System.out.println("startProgramView and MainMenuView: ");
        StartProgramView startProgramView = new StartProgramView();
        MainMenuView mainMenuView = new MainMenuView();
        startProgramView.display();
        mainMenuView.display();
-       OregonTrail.setPlayer(player);    
-
-       
-       
-       
-
-
-       
+       OregonTrail.setPlayer(player);
        System.out.println("Occupations View: ");
        OccupationsView occupationsView = new OccupationsView();
        occupationsView.display();
        System.out.println("Gold Panning View: ");
        GoldPanningView goldPanningView = new GoldPanningView();
        goldPanningView.display();
+       System.out.println("HelpMenuView: ");
+       HelpMenuView helpMenuView = new HelpMenuView();
+       helpMenuView.display();
+       System.out.println("ShopMenuView: ");
+       ShopMenuView shopMenuView = new ShopMenuView();
+       shopMenuView.display();
+       System.out.println("BuyingFoodView: ");
+       BuyingFoodView buyingFoodView = new BuyingFoodView();
+       buyingFoodView.display();
+       
+       
     }
 
     public static Game getCurrentGame() {

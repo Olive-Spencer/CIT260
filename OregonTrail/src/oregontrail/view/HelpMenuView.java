@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Coby
  */
-class HelpMenuView extends View {
+public class HelpMenuView extends View {
     public HelpMenuView(){
         super("\nG - What is the goal of the game?"
         + "\nE - Estimate amount of resources needed"
