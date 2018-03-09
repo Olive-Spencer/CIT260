@@ -17,5 +17,13 @@ public class ItemControl {
         System.out.println("Called setCurrentClothes() in ItemControl");
         System.out.println("amount is:" + amount);
     }
+    public static void getCurrentOxen(){
+        System.out.println("Called getCurrentOxen in ItemControl");
+    }
+    public static void setCurrentOxen(int amount){
+        System.out.println("Called setCurrentOxen() in ItemControl");
+        System.out.println("amount is:" + amount);
+    }
+ 
  
 }

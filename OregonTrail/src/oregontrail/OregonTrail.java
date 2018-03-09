@@ -23,6 +23,7 @@ import oregontrail.view.MainMenuView;
 import oregontrail.view.OccupationsView;
 import oregontrail.view.ShopMenuView;
 import oregontrail.view.HelpMenuView;
+import oregontrail.view.OxenPurchaseView;
 
 /**
  *
@@ -35,7 +36,8 @@ public class OregonTrail {
     public static void main(String[] args) {
        
       
-       System.out.println("Departure Date Menu View: ");
+       /* Commented out for Spencer Individual Assignement
+        System.out.println("Departure Date Menu View: ");
        DepartureDateMenuView departureDateMenuView = new DepartureDateMenuView();
        departureDateMenuView.display();
        System.out.println("ClothingPurchaseView: ");
@@ -61,7 +63,11 @@ public class OregonTrail {
        shopMenuView.display();
        System.out.println("BuyingFoodView: ");
        BuyingFoodView buyingFoodView = new BuyingFoodView();
-       buyingFoodView.display();
+       buyingFoodView.display();*/
+       System.out.println("OxenPurchaseView: ");
+       OxenPurchaseView oxenPurchaseView = new OxenPurchaseView();
+       oxenPurchaseView.display();
+       
        
        
     }
