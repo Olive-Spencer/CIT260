@@ -14,6 +14,7 @@ import oregontrail.model.Occupation;
 import oregontrail.model.Player;
 import oregontrail.model.RegularSceneType;
 import oregontrail.model.Wagon;
+import oregontrail.view.AmmunitionPurchaseView;
 import oregontrail.view.BuyingFoodView;
 import oregontrail.view.ClothingPurchaseView;
 import oregontrail.view.DepartureDateMenuView;
@@ -36,7 +37,8 @@ public class OregonTrail {
     public static void main(String[] args) {
        
       
-       /* Commented out for Spencer Individual Assignement
+       /*Commented out for Angie's Individual Assignement
+        Commented out for Spencer Individual Assignement
         System.out.println("Departure Date Menu View: ");
        DepartureDateMenuView departureDateMenuView = new DepartureDateMenuView();
        departureDateMenuView.display();
@@ -63,11 +65,13 @@ public class OregonTrail {
        shopMenuView.display();
        System.out.println("BuyingFoodView: ");
        BuyingFoodView buyingFoodView = new BuyingFoodView();
-       buyingFoodView.display();*/
+       buyingFoodView.display();
        System.out.println("OxenPurchaseView: ");
        OxenPurchaseView oxenPurchaseView = new OxenPurchaseView();
-       oxenPurchaseView.display();
-       
+       oxenPurchaseView.display();*/
+       System.out.println("AmmunitionPurchaseView: ");
+       AmmunitionPurchaseView ammunitionPurchaseView = new AmmunitionPurchaseView();
+       ammunitionPurchaseView.display();
        
        
     }
