@@ -11,55 +11,20 @@ import java.util.Scanner;
  *
  * @author Coby
  */
-class HelpMenuView {
-    public void display(){
-            boolean endOfView = false;
-        do{
-            String[] inputs = new String[1];
-            inputs[0] = this.getInputs();
-            if(inputs[0] == null || inputs[0].equals("Q")){
-                return;
-            }
-            else {
-                endOfView = doAction(inputs);   
-            }
-        }
-        while(endOfView != true);
+class HelpMenuView extends View {
+    public HelpMenuView(){
+        super("\nG - What is the goal of the game?"
+        + "\nE - Estimate amount of resources needed"
+        + "\nO - List of Occupations"
+        + "\nQ - Quit to main menu"
+        + "\nPlease enter your choice:");
     }
     
-    private String getInputs(){
-        Scanner inFile;
-        inFile = new Scanner(System.in);
-        boolean valid = false;
-        String newInputs = null;
-        System.out.println("G - What is the goal of the game?");
-        System.out.println("E - Estimate amount of resources needed");
-        System.out.println("O - List of Occupations");
-        System.out.println("Q - Quit to main menu");
-        while(valid == false)
-        {
-            System.out.println("Please enter your choice:");
-            String inputs = inFile.nextLine();
-            int inputsLength = inputs.length();
-            if (inputsLength < 1)
-            {
-                System.out.println("Invalid value entered");
-                continue;
-            }
-            else
-            {
-                valid = true;
-                newInputs = inputs.trim().toUpperCase();
-                
-            }
-        }
-        return newInputs;
-
     
-    }
-
-    private boolean doAction(String[] inputs) {
-        String menuItem = inputs[0];
+   
+        @Override
+        public boolean doAction(String inputs) {
+        String menuItem = inputs;
         switch (menuItem)
         {
             case "G": System.out.println("The goal of the game is to get at least one person to Oregon.");

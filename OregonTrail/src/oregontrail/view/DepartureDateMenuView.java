@@ -12,58 +12,25 @@ import java.util.Scanner;
  * @author spencer
  */
 
-public class DepartureDateMenuView {
-        public void display(){
-            boolean endOfView;
-        do{
-            String[] inputs = new String[1];
-            inputs[0] = this.getInputs();
-            if(inputs[0] == null || inputs[0].equals("Q")){
-                return;
-            }
-            else {
-                endOfView = doAction(inputs);   
-            }
-        }
-        while(endOfView != true);
+public class DepartureDateMenuView extends View {
+    public DepartureDateMenuView(){
+        super("\n"
+    + "\n-------------------------------------------------------------"
+    + "\n|When To leave                                              |"
+    + "\n-------------------------------------------------------------"
+    + "\nNThe time of year you choose to leave is very important!"
+    + "\nChoose wisely!"
+    + "\n1 - March"
+    + "\n2 - April"
+    + "\n3 - May"
+    + "\n4 - June"
+    + "\n5 - July"
+    + "\nQ - Quit to main menu"
+    + "\nPlease enter your choice:");
     }
-    
-    private String getInputs(){
-        Scanner inFile;
-        inFile = new Scanner(System.in);
-        boolean valid = false;
-        String adjustedInputs = null;
-        System.out.println("The year time of year you choose to leave is very important! Choose wisely!");
-        System.out.println("1 - March");
-        System.out.println("2 - April");
-        System.out.println("3 - May");
-        System.out.println("4 - June");
-        System.out.println("5 - July");
-        System.out.println("Q - Quit to main menu");
-        while(valid == false)
-        {
-            System.out.println("Please enter your choice:");
-            String inputs = inFile.nextLine();
-            int inputsLength = inputs.length();
-            if (inputsLength < 1)
-            {
-                System.out.println("Invalid value entered");
-                
-            }
-            else
-            {
-                valid = true;
-                adjustedInputs = inputs.trim().toUpperCase();
-                
-            }
-        }
-        return adjustedInputs;
-
-    
-    }
-
-    private boolean doAction(String[] inputs) {
-        String menuItem = inputs[0];
+    @Override
+        public boolean doAction(String inputs) {
+        String menuItem = inputs;
         
         switch (menuItem)
         {

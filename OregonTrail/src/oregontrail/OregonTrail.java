@@ -33,32 +33,28 @@ public class OregonTrail {
 
     public static void main(String[] args) {
        
-       //Commented out Spencer's classes to make mine work for the submission.
-       //System.out.println("Departure Date Menu View: ");
-       //DepartureDateMenuView departureDateMenuView = new DepartureDateMenuView();
-       //departureDateMenuView.display();
-       //System.out.println("clothingPurchaseView: ");
-       //ClothingPurchaseView clothingPurchaseView = new ClothingPurchaseView();
-       //clothingPurchaseView.display();
-       //StartProgramView startProgramView = new StartProgramView();
-       //MainMenuView mainMenuView = new MainMenuView();
-       //startProgramView.display();
-       //mainMenuView.display();
-       //OregonTrail.setPlayer(player);    
+      
+       System.out.println("Departure Date Menu View: ");
+       DepartureDateMenuView departureDateMenuView = new DepartureDateMenuView();
+       departureDateMenuView.display();
+       System.out.println("clothingPurchaseView: ");
+       ClothingPurchaseView clothingPurchaseView = new ClothingPurchaseView();
+       clothingPurchaseView.display();
+       StartProgramView startProgramView = new StartProgramView();
+       MainMenuView mainMenuView = new MainMenuView();
+       startProgramView.display();
+       mainMenuView.display();
+       OregonTrail.setPlayer(player);    
 
        
-       //commented out items that won't be used for this assignment
-       //StartProgramView startProgramView = new StartProgramView();
-       //MainMenuView mainMenuView = new MainMenuView();
-       //startProgramView.display();
-       //mainMenuView.display();
-       //OregonTrail.setPlayer(player);    
+       
+       
 
 
        
-       //System.out.println("Occupations View: ");
-       //OccupationsView occupationsView = new OccupationsView();
-       //occupationsView.display();
+       System.out.println("Occupations View: ");
+       OccupationsView occupationsView = new OccupationsView();
+       occupationsView.display();
        System.out.println("Gold Panning View: ");
        GoldPanningView goldPanningView = new GoldPanningView();
        goldPanningView.display();

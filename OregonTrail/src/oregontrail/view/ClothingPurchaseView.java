@@ -12,51 +12,15 @@ import oregontrail.control.ItemControl;
  *
  * @author spencer
  */
-public class ClothingPurchaseView {
-    
-        
-        public void display() {
-        boolean endOfView;
-        do{
-            String[] inputs = new String[1];
-            inputs[0] = this.getInputs();
-            if(inputs[0] == null || inputs[0].equals("Q")){
-                return;
-            }
-            else {
-                endOfView = doAction(inputs);   
-            }
-        }
-        while(endOfView != true);
+public class ClothingPurchaseView extends View {
+    public ClothingPurchaseView(){
+        super("\n"
+    + "\nPlease enter how many sets of clothing you would like to buy."
+    + "\nPress Q to go view my other wares"
+    + "\n-------------------------------------------------------------");
     }
-        
-    private String getInputs() {
-        Scanner inFile;
-        inFile = new Scanner(System.in);
-        boolean valid = false;
-        String newAmount = null;        
-        System.out.println("Please enter how man sets of clothing you would like to buy.");
-        System.out.println("Press Q to go view my other wares.");
-        while(valid == false)
-        {
-            
-            String amount = inFile.nextLine();
-            int inputsLength = amount.length();
-            if (inputsLength < 1)
-            {
-                System.out.println("You must enter a non-blank value.");
-            }
-            else
-            {
-                valid = true;
-                newAmount = amount.trim().toUpperCase();
-                
-            }
-        }
-        return newAmount;
-
-    }
-        private boolean doAction(String[] newAmount) {
+    @Override
+        public boolean doAction(String newAmount) {
             Scanner inFile;
             inFile = new Scanner(System.in);
             
@@ -64,7 +28,7 @@ public class ClothingPurchaseView {
             
             boolean second = false;
             
-            int amount = Integer.parseInt(newAmount[0]);
+            int amount = Integer.parseInt(newAmount);
             
             ItemControl.getCurrentClothes();
             ItemControl.setCurrentClothes(amount);

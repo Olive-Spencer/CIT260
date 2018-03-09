@@ -11,58 +11,22 @@ import java.util.Scanner;
  *
  * @author Coby
  */
-public class ShopMenuView {
+public class ShopMenuView extends View {
     BuyingFoodView buyingFoodView = new BuyingFoodView();
-    public void display(){
-            boolean endOfView = false;
-        do{
-            String[] inputs = new String[1];
-            inputs[0] = this.getInputs();
-            if(inputs[0] == null || inputs[0].equals("Q")){
-                return;
-            }
-            else {
-                endOfView = doAction(inputs);   
-            }
-        }
-        while(endOfView != true);
+    public ShopMenuView(){
+        super("\nChoose which ware you want to purchase:"
+        + "\nF - Food"
+        +"\nC - Clothes"
+        +"\nO - Oxen"
+        +"\nT - Wagon Tongues"
+        +"\nW - Wagon Wheels"
+        +"\nB - Bullets"
+        +"\nQ - Leave shop"
+        +"\nPlease enter what you would like to buy:");
     }
-    
-    private String getInputs(){
-        Scanner inFile;
-        inFile = new Scanner(System.in);
-        boolean valid = false;
-        String newInputs = null;
-        System.out.println("Choose which ware you want to purchase:");
-        System.out.println("F - Food");
-        System.out.println("C - Clothes");
-        System.out.println("O - Oxen");
-        System.out.println("T - Wagon Tongues");
-        System.out.println("W - Wagon Wheels");
-        System.out.println("B - Bullets");
-        System.out.println("Q - Leave shop"); 
-        do
-        {
-            System.out.println("Please enter what you would like to buy:");
-            String inputs = inFile.nextLine();
-            int inputsLength = inputs.length();
-            newInputs = inputs.trim().toUpperCase();
-            if (inputsLength < 1)
-            {
-                System.out.println("Invalid value entered");
-                continue;
-            }
-            else
-            {
-                valid = true;
-            }
-        } 
-        while(valid == false);
-        return newInputs;
-    }
-    
-        private boolean doAction(String[] inputs) {
-        String menuItem = inputs[0];
+        @Override
+        public boolean doAction(String inputs) {
+        String menuItem = inputs;
         switch (menuItem)
         {
             case "F": buyingFoodView.display();

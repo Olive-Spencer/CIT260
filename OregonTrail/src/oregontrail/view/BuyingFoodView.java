@@ -12,55 +12,20 @@ import oregontrail.control.FoodControl;
  *
  * @author Coby
  */
-public class BuyingFoodView {
+public class BuyingFoodView extends View {
+    public BuyingFoodView(){
+        super("\nPlease enter how much food you would like to buy."
+        +"\nPress Q to go view my other wares.");
+    }
     
-        public void display() {
-        boolean endOfView = false;
-        do{
-            String[] inputs = new String[1];
-            inputs[0] = this.getInputs();
-            if(inputs[0] == null || inputs[0].equals("Q")){
-                return;
-            }
-            else {
-                endOfView = doAction(inputs);   
-            }
-        }
-        while(endOfView != true);
-    }
         
-    private String getInputs() {
-        Scanner inFile;
-        inFile = new Scanner(System.in);
-        boolean valid = false;
-        String newInputs = null;
-        System.out.println("Please enter how much food you would like to buy.");
-        System.out.println("Press Q to go view my other wares.");
-        while(valid == false)
-        {
-            String inputs = inFile.nextLine();
-            int inputsLength = inputs.length();
-            if (inputsLength < 1)
-            {
-                System.out.println("You must enter a non-blank value.");
-                continue;
-            }
-            else
-            {
-                valid = true;
-                newInputs = inputs.trim().toUpperCase();
-                
-            }
-        }
-        return newInputs;
-
-    }
-        private boolean doAction(String[] inputs) {
+        @Override
+        public boolean doAction(String inputs) {
             Scanner inFile;
             inFile = new Scanner(System.in);
-            String newAgain = null;
+            String newAgain;
             boolean second = false;
-            int amount = Integer.parseInt(inputs[0]);
+            int amount = Integer.parseInt(inputs);
             FoodControl.getCurrentFood();
             FoodControl.setCurrentFood(amount);
             while (second == false){
