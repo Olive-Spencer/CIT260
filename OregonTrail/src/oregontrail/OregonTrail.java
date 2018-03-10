@@ -25,6 +25,7 @@ import oregontrail.view.OccupationsView;
 import oregontrail.view.ShopMenuView;
 import oregontrail.view.HelpMenuView;
 import oregontrail.view.OxenPurchaseView;
+import oregontrail.view.WagonTongueView;
 
 /**
  *
@@ -44,14 +45,14 @@ public class OregonTrail {
        departureDateMenuView.display();
        System.out.println("ClothingPurchaseView: ");
        ClothingPurchaseView clothingPurchaseView = new ClothingPurchaseView();
-       clothingPurchaseView.display();
+       clothingPurchaseView.display();*/
        System.out.println("startProgramView and MainMenuView: ");
        StartProgramView startProgramView = new StartProgramView();
        MainMenuView mainMenuView = new MainMenuView();
        startProgramView.display();
        mainMenuView.display();
        OregonTrail.setPlayer(player);
-       System.out.println("Occupations View: ");
+       /*System.out.println("Occupations View: ");
        OccupationsView occupationsView = new OccupationsView();
        occupationsView.display();
        System.out.println("Gold Panning View: ");
@@ -69,9 +70,13 @@ public class OregonTrail {
        System.out.println("OxenPurchaseView: ");
        OxenPurchaseView oxenPurchaseView = new OxenPurchaseView();
        oxenPurchaseView.display();*/
-       System.out.println("AmmunitionPurchaseView: ");
-       AmmunitionPurchaseView ammunitionPurchaseView = new AmmunitionPurchaseView();
-       ammunitionPurchaseView.display();
+       //System.out.println("AmmunitionPurchaseView: ");
+       //AmmunitionPurchaseView ammunitionPurchaseView = new AmmunitionPurchaseView();
+       //ammunitionPurchaseView.display();
+       //System.out.println("WagonTongueView: ");
+       //WagonTongueView wagonTongueView = new WagonTongueView();
+       //wagonTongueView.display();
+       
        
        
     }

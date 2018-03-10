@@ -28,8 +28,10 @@ public class MainMenuView extends View {
     + "\n-------------------------------------------------------------");
     }
     
-    private static boolean doAction(String[] inputs) {
-            String menuItem = inputs[0];
+    
+    @Override
+    public boolean doAction(String inputs) {
+            String menuItem = inputs.toUpperCase();
             switch (menuItem)
             {
                 case "N": startNewGame();
@@ -68,5 +70,4 @@ public class MainMenuView extends View {
         ShopMenuView shopMenuView = new ShopMenuView();
         shopMenuView.display();
     }
-
 }

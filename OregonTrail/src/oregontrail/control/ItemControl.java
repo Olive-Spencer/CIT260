@@ -31,5 +31,11 @@ public class ItemControl {
         System.out.println("Called setCurrentOxen() in ItemControl");
         System.out.println("amount is:" + amount);
     }
+    public static void getCurrentTongues(){
+        System.out.println("Called GetCurrentTongues in ItemControl.");
+    }
+    public static void setCurrentTongues(int amount){
+        System.out.println("amount is: " + amount);
+    }
  
 }

@@ -13,6 +13,9 @@ import java.util.Scanner;
  */
 public class ShopMenuView extends View {
     BuyingFoodView buyingFoodView = new BuyingFoodView();
+    WagonTongueView wagonTongueView = new WagonTongueView();
+    AmmunitionPurchaseView ammunitionPurchaseView = new AmmunitionPurchaseView();
+    OxenPurchaseView oxenPurchaseView = new OxenPurchaseView();
     public ShopMenuView(){
         super("\nChoose which ware you want to purchase:"
         + "\nF - Food"
@@ -26,20 +29,20 @@ public class ShopMenuView extends View {
     }
         @Override
         public boolean doAction(String inputs) {
-        String menuItem = inputs;
+        String menuItem = inputs.toUpperCase();
         switch (menuItem)
         {
             case "F": buyingFoodView.display();
             break;
             case "C": System.out.println("You are now buying clothes!");
             break;
-            case "O": System.out.println("You are now buying Oxen!");
+            case "O": oxenPurchaseView.display();
             break;
-            case "T": System.out.println("You are now buying Wagon Tongues!");
+            case "T": wagonTongueView.display();
             break;
             case "W": System.out.println("You are now buying Wagon Wheels!");
             break;
-            case "B": System.out.println("You are now buying Bullets!");
+            case "B": ammunitionPurchaseView.display();
             break;
             case "Q": System.out.println("Come back soon!");
                       return true;
