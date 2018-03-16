@@ -16,6 +16,7 @@ public class HelpMenuView extends View {
         super("\nG - What is the goal of the game?"
         + "\nE - Estimate amount of resources needed"
         + "\nO - List of Occupations"
+        + "\nI - List of Items and Weight"
         + "\nQ - Quit to main menu"
         + "\nPlease enter your choice:");
     }
@@ -25,6 +26,7 @@ public class HelpMenuView extends View {
         @Override
         public boolean doAction(String inputs) {
         String menuItem = inputs;
+        ItemListHelpView itemListHelpView = new ItemListHelpView();
         switch (menuItem)
         {
             case "G": System.out.println("The goal of the game is to get at least one person to Oregon.");
@@ -33,6 +35,7 @@ public class HelpMenuView extends View {
             break;
             case "O": System.out.println("More on the different occupations coming soon.");
             break;
+            case "I": itemListHelpView.display();
             case "Q": return true;
             default: System.out.println("Invalid menu item");
         }
