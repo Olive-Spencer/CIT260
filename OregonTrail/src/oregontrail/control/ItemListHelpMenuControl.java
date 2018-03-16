@@ -29,45 +29,43 @@ public class ItemListHelpMenuControl {
         }
             else if ("R".equals(input)){
             String[] array2 = SortReverse(array);
-            for(String i:array2){
-            System.out.println(i);
-            
-            
-        }
+                for(String i:array2){
+                System.out.println(i);
+            }
         }
     }
     
      
-    public static String[] SortReverse(String[] input){
+    public static String[] SortReverse(String[] array){
          
-        String temp;
-        for (int i = 1; i < input.length; i++) {
+        String tempStr;
+        for (int i = 1; i < array.length; i++) {
             for(int j = i ; j > 0 ; j--){
-                if(input[j].compareToIgnoreCase(input[j-1]) > 0) {
-                    temp = input[j];
-                    input[j] = input[j-1];
-                    input[j-1] = temp;
+                if(array[j].compareToIgnoreCase(array[j-1]) > 0) {
+                    tempStr = array[j];
+                    array[j] = array[j-1];
+                    array[j-1] = tempStr;
                 }
             }
         }
         
-        return input;
+        return array;
     }
     
-    public static String[] Sort(String[] input){
+    public static String[] Sort(String[] array){
          
-        String temp;
-        for (int i = 1; i < input.length; i++) {
+        String tempStr;
+        for (int i = 1; i < array.length; i++) {
             for(int j = i ; j > 0 ; j--){
-                if(input[j].compareToIgnoreCase(input[j-1]) < 0) {
-                    temp = input[j];
-                    input[j] = input[j-1];
-                    input[j-1] = temp;
+                if(array[j].compareToIgnoreCase(array[j-1]) < 0) {
+                    tempStr = array[j];
+                    array[j] = array[j-1];
+                    array[j-1] = tempStr;
                 }
             }
         }
         
-        return input;
+        return array;
     }
 }
     
