@@ -17,6 +17,7 @@ public class HelpMenuView extends View {
         + "\nE - Estimate amount of resources needed"
         + "\nO - List of Occupations"
         + "\nI - List of Items and Weight"
+        + "\nL - List of locations and the average distance between them"
         + "\nQ - Quit to main menu"
         + "\nPlease enter your choice:");
     }
@@ -27,6 +28,7 @@ public class HelpMenuView extends View {
         public boolean doAction(String inputs) {
         String menuItem = inputs;
         ItemListHelpView itemListHelpView = new ItemListHelpView();
+        LocationSortView locationSorting = new LocationSortView();
         switch (menuItem)
         {
             case "G": System.out.println("The goal of the game is to get at least one person to Oregon.");
@@ -36,6 +38,9 @@ public class HelpMenuView extends View {
             case "O": System.out.println("More on the different occupations coming soon.");
             break;
             case "I": itemListHelpView.display();
+            break;
+            case "L": locationSorting.display();
+            break;
             case "Q": return true;
             default: System.out.println("Invalid menu item");
         }
