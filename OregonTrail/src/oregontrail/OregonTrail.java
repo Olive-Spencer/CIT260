@@ -79,8 +79,8 @@ public class OregonTrail {
        GoldPanningView goldPanningView = new GoldPanningView();
        goldPanningView.display();
        System.out.println("HelpMenuView: ");*/
-       HelpMenuView helpMenuView = new HelpMenuView();
-       helpMenuView.display();
+       //HelpMenuView helpMenuView = new HelpMenuView();
+       //helpMenuView.display();
        /*
        System.out.println("ShopMenuView: ");
        ShopMenuView shopMenuView = new ShopMenuView();

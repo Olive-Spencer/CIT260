@@ -41,6 +41,7 @@ public class MainMenuView extends View {
                 case "H": getHelp();
                 break;
                 case "S": shopMenu();
+                break;
                 case "Q": return true;
                 default: System.out.println("Invalid menu item");                
             }
@@ -61,9 +62,6 @@ public class MainMenuView extends View {
     private static void getHelp() {
         HelpMenuView helpMenuView = new HelpMenuView();
         helpMenuView.display();
-        GameControl.createNewGame(OregonTrail.getPlayer());
-        GameMenuView gameMenuView = new GameMenuView();
-        gameMenuView.display();
     }
     
     private static void shopMenu(){

@@ -43,8 +43,7 @@ public class GameMenuView extends View{
                 case "H": goHunting();
                 break;
                 case "N": locationNumber++;
-                nextLocation();
-                break;
+                return nextLocation();
                 case "Q": return true;
                 default: System.out.println("Invalid menu item");                
             }
@@ -59,8 +58,23 @@ public class GameMenuView extends View{
         hunting.display();
     }
     
-    public void nextLocation(){
-        map.setMiles(locations[locationNumber].getMiles());
-        System.out.println("You have arrived at " + locations[locationNumber]);
+    public boolean nextLocation(){
+        if (locationNumber == 26)
+        {
+            System.out.println("YOU WIN THE GAME QUIT TRYING TO MOVE FORWARD OR YOU WILL DROWN. SIR.");
+            return true;
+        }
+            map.setMiles(locations[locationNumber].getMiles());
+            System.out.println("You have arrived at " + locations[locationNumber]);
+            return false;
+        
+    }
+    
+    public boolean checkLocation(int location){
+        if (locationNumber == 26)
+        {
+
+        }
+        return false;
     }
 }
