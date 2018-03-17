@@ -15,7 +15,6 @@ public class Player implements Serializable {
 //class instance variables
    private String name;
    private double highScore;
-   private ArrayList<Game> games = new ArrayList<Game>();
   
    
 //constructor
@@ -39,14 +38,6 @@ public class Player implements Serializable {
 
     public void setHighScore(double highScore) {
         this.highScore = highScore;
-    }
-
-    public ArrayList<Game> getGames() {
-        return games;
-    }
-
-    public void setGames(ArrayList<Game> games) {
-        this.games = games;
     }
     
     
@@ -82,7 +73,7 @@ public class Player implements Serializable {
 
     @Override
     public String toString() {
-        return "Player{" + "name=" + name + ", highScore=" + highScore + ", games=" + games + '}';
+        return "Player{" + "name=" + name + ", highScore=" + highScore + '}';
     }
 
     

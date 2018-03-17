@@ -15,10 +15,10 @@ public class Game {
     //class instance variables
     private String playersName;
     private double currentScore;
-    private double actorCount;
     private String location;
     private double[] highScoresList = new double[10];
     private Player player;
+    private Actor[] actor = new Actor[5];
 
     //constructor
     public Game() {
@@ -40,14 +40,6 @@ public class Game {
 
     public void setCurrentScore(double currentScore) {
         this.currentScore = currentScore;
-    }
-
-    public double getActorCount() {
-        return actorCount;
-    }
-
-    public void setActorCount(double actorCount) {
-        this.actorCount = actorCount;
     }
 
     public String getLocation() {
@@ -74,13 +66,20 @@ public class Game {
         this.player = player;
     }
 
+    public Actor[] getActor() {
+        return actor;
+    }
+
+    public void setActor(Actor[] actor) {
+        this.actor = actor;
+    }
+
     
     @Override
     public int hashCode() {
         int hash = 3;
         hash = 79 * hash + Objects.hashCode(this.playersName);
         hash = 79 * hash + (int) (Double.doubleToLongBits(this.currentScore) ^ (Double.doubleToLongBits(this.currentScore) >>> 32));
-        hash = 79 * hash + (int) (Double.doubleToLongBits(this.actorCount) ^ (Double.doubleToLongBits(this.actorCount) >>> 32));
         hash = 79 * hash + Objects.hashCode(this.location);
         hash = 79 * hash + Arrays.hashCode(this.highScoresList);
         return hash;
@@ -101,9 +100,6 @@ public class Game {
         if (Double.doubleToLongBits(this.currentScore) != Double.doubleToLongBits(other.currentScore)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.actorCount) != Double.doubleToLongBits(other.actorCount)) {
-            return false;
-        }
         if (!Objects.equals(this.playersName, other.playersName)) {
             return false;
         }
@@ -118,7 +114,7 @@ public class Game {
 
     @Override
     public String toString() {
-        return "Game{" + "playersName=" + playersName + ", currentScore=" + currentScore + ", actorCount=" + actorCount + ", location=" + location + ", highScoresList=" + highScoresList + ", player=" + player + '}';
+        return "Game{" + "playersName=" + playersName + ", currentScore=" + currentScore + ", location=" + location + ", highScoresList=" + highScoresList + ", player=" + player + '}';
     }
     
     

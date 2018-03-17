@@ -9,7 +9,6 @@ import oregontrail.model.Game;
 import java.util.ArrayList;
 import oregontrail.model.Actor;
 import oregontrail.model.Location;
-import oregontrail.model.Map;
 import oregontrail.model.Occupation;
 import oregontrail.model.Player;
 import oregontrail.model.RegularSceneType;
@@ -26,6 +25,9 @@ import oregontrail.view.ShopMenuView;
 import oregontrail.view.HelpMenuView;
 import oregontrail.view.OxenPurchaseView;
 import oregontrail.view.WagonTongueView;
+import oregontrail.view.MapView;
+import oregontrail.control.MapControl;
+import oregontrail.control.GameControl;
 
 /**
  *
@@ -46,7 +48,7 @@ public class OregonTrail {
        System.out.println("ClothingPurchaseView: ");
        ClothingPurchaseView clothingPurchaseView = new ClothingPurchaseView();
        clothingPurchaseView.display();*/
-       System.out.println("startProgramView and MainMenuView: ");
+       /*System.out.println("startProgramView and MainMenuView: ");*/
        StartProgramView startProgramView = new StartProgramView();
        MainMenuView mainMenuView = new MainMenuView();
        startProgramView.display();
@@ -76,8 +78,6 @@ public class OregonTrail {
        //System.out.println("WagonTongueView: ");
        //WagonTongueView wagonTongueView = new WagonTongueView();
        //wagonTongueView.display();
-       
-       
        
     }
 

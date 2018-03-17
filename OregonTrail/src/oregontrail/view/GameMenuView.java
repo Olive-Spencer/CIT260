@@ -5,12 +5,62 @@
  */
 package oregontrail.view;
 
+import oregontrail.model.LocationNames;
+
 /**
  *
  * @author Coby
  */
-public class GameMenuView {
-    public void display(){
-        System.out.println("GameMenuView.display() called");
+public class GameMenuView extends View{
+    private MapView map = new MapView();
+    private RestView rest = new RestView();
+    private HuntingView hunting = new HuntingView();
+    private LocationNames[] locations = LocationNames.values();
+    private int locationNumber = 0;
+    public GameMenuView(){
+        super("\n"
+    + "\n-------------------------------------------------------------"
+    + "\n| Game Menu                                                 |"
+    + "\n-------------------------------------------------------------"
+    + "\nR - Rest"
+    + "\nM - View Map"
+    + "\nH - Go hunting"
+    + "\nN - Go to next location"
+    + "\nQ - Quit"
+    + "\n-------------------------------------------------------------");
+    }
+    
+    
+    @Override
+    public boolean doAction(String inputs) {
+            String menuItem = inputs.toUpperCase();
+            switch (menuItem)
+            {
+                case "R": rest();
+                break;
+                case "M": map.display();
+                break;
+                case "H": goHunting();
+                break;
+                case "N": locationNumber++;
+                nextLocation();
+                break;
+                case "Q": return true;
+                default: System.out.println("Invalid menu item");                
+            }
+            return false;
+        }
+    
+    public void rest(){
+        rest.display();
+    }
+    
+    public void goHunting(){
+        hunting.display();
+    }
+    
+    public void nextLocation(){
+        map.setMiles(locations[locationNumber].getMiles());
+        System.out.println("You have arrived at " + locations[locationNumber]);
     }
 }

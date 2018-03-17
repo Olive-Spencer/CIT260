@@ -10,5 +10,4 @@ package oregontrail.control;
  * @author spencer
  */
 public class ActorControl {
-    
 }

@@ -14,11 +14,16 @@ import java.util.Objects;
  */
 public class Actor implements Serializable {
     private String name;
-    private Occupation occupation;
-    private String currentHealth;
+    private int currentHealth;
     private String status;
 
     public Actor() {
+    }
+    
+    public Actor(String name, int currentHealth, String status){
+        this.name = name;
+        this.currentHealth = currentHealth;
+        this.status = status;
     }
 
     public String getName() {
@@ -29,15 +34,11 @@ public class Actor implements Serializable {
         this.name = name;
     }
 
-    public Occupation getOccupation() {
-        return occupation;
-    }
-
-    public String getCurrentHealth() {
+    public int getCurrentHealth() {
         return currentHealth;
     }
 
-    public void setCurrentHealth(String currentHealth) {
+    public void setCurrentHealth(int currentHealth) {
         this.currentHealth = currentHealth;
     }
 
@@ -47,10 +48,6 @@ public class Actor implements Serializable {
 
     public void setStatus(String status) {
         this.status = status;
-    }
-
-    public Actor(Occupation occupation) {
-        this.occupation = occupation;
     }
 
     @Override
@@ -88,7 +85,7 @@ public class Actor implements Serializable {
 
     @Override
     public String toString() {
-        return "Actor{" + "name=" + name + ", occupation=" + occupation + ", currentHealth=" + currentHealth + ", status=" + status + '}';
+        return "Actor{" + "name=" + name + ", currentHealth=" + currentHealth + ", status=" + status + '}';
     }
     
 }
