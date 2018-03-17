@@ -49,11 +49,16 @@ public class OregonTrail {
        ClothingPurchaseView clothingPurchaseView = new ClothingPurchaseView();
        clothingPurchaseView.display();*/
        /*System.out.println("startProgramView and MainMenuView: ");*/
+       
+       //Code to start the game.
        StartProgramView startProgramView = new StartProgramView();
        MainMenuView mainMenuView = new MainMenuView();
        startProgramView.display();
        mainMenuView.display();
        OregonTrail.setPlayer(player);
+       
+       
+       
        /*System.out.println("Occupations View: ");
        OccupationsView occupationsView = new OccupationsView();
        occupationsView.display();
@@ -78,6 +83,7 @@ public class OregonTrail {
        //System.out.println("WagonTongueView: ");
        //WagonTongueView wagonTongueView = new WagonTongueView();
        //wagonTongueView.display();
+       
        
     }
 
