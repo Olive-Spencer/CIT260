@@ -7,6 +7,7 @@ package oregontrail;
 
 import oregontrail.model.Game;
 import java.util.ArrayList;
+import oregontrail.control.ItemListHelpMenuControl;
 import oregontrail.model.Actor;
 import oregontrail.model.Location;
 import oregontrail.model.Occupation;
@@ -23,6 +24,7 @@ import oregontrail.view.MainMenuView;
 import oregontrail.view.OccupationsView;
 import oregontrail.view.ShopMenuView;
 import oregontrail.view.HelpMenuView;
+import oregontrail.view.ItemListHelpView;
 import oregontrail.view.OxenPurchaseView;
 import oregontrail.view.WagonTongueView;
 import oregontrail.view.MapView;
@@ -40,6 +42,11 @@ public class OregonTrail {
     public static void main(String[] args) {
        
       
+        
+        
+        
+        
+        
        /*Commented out for Angie's Individual Assignement
         Commented out for Spencer Individual Assignement
         System.out.println("Departure Date Menu View: ");
@@ -59,15 +66,22 @@ public class OregonTrail {
        
        
        
+       //System.out.println("startProgramView and MainMenuView: ");
+       //StartProgramView startProgramView = new StartProgramView();
+       //MainMenuView mainMenuView = new MainMenuView();
+       //startProgramView.display();
+       //mainMenuView.display();
+       //OregonTrail.setPlayer(player);
        /*System.out.println("Occupations View: ");
        OccupationsView occupationsView = new OccupationsView();
        occupationsView.display();
        System.out.println("Gold Panning View: ");
        GoldPanningView goldPanningView = new GoldPanningView();
        goldPanningView.display();
-       System.out.println("HelpMenuView: ");
+       System.out.println("HelpMenuView: ");*/
        HelpMenuView helpMenuView = new HelpMenuView();
        helpMenuView.display();
+       /*
        System.out.println("ShopMenuView: ");
        ShopMenuView shopMenuView = new ShopMenuView();
        shopMenuView.display();
