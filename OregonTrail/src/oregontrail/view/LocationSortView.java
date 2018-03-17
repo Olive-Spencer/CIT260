@@ -5,12 +5,14 @@
  */
 package oregontrail.view;
 import oregontrail.model.LocationNames;
+import oregontrail.control.LocationSortControl;
 /**
  *
  * @author Coby
  */
 public class LocationSortView extends View{
     private LocationNames[] locations = LocationNames.values();
+    private LocationSortControl calcLocation = new LocationSortControl();
     @Override
             public void display(){
     System.out.println("\n"
@@ -20,18 +22,10 @@ public class LocationSortView extends View{
         for (LocationNames location : locations){
             System.out.println(location);
         }
-        int total = 0;
-        for (int i = 1; i <= 25; i++)
-        {
-            int miles;
-            int j = i-1;
-            miles = locations[i].getMiles() - locations [j].getMiles();
-            total = total + miles;
-        }
-        double average = total/26;
+
         System.out.println("\nYou will travel a total of 2000 miles on the "
                 + "trail, but the average distance between each location is "
-                + average + " miles.");
+                + calcLocation.calcAverageMiles() + " miles.");
     }
             @Override
             public boolean doAction(String inputs)
