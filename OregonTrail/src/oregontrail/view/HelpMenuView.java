@@ -29,13 +29,14 @@ public class HelpMenuView extends View {
         String menuItem = inputs;
         ItemListHelpView itemListHelpView = new ItemListHelpView();
         LocationSortView locationSorting = new LocationSortView();
+        OccupationsSortView occupationsSortView = new OccupationsSortView();
         switch (menuItem)
         {
             case "G": System.out.println("The goal of the game is to get at least one person to Oregon.");
             break;
             case "E": System.out.println("More on resource estimates coming soon.");
             break;
-            case "O": System.out.println("More on the different occupations coming soon.");
+            case "O": occupationsSortView.display();
             break;
             case "I": itemListHelpView.display();
             break;
@@ -46,4 +47,6 @@ public class HelpMenuView extends View {
         }
         return false;
     }
+
+    
 }

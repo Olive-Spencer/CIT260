@@ -31,6 +31,7 @@ import oregontrail.view.MapView;
 import oregontrail.control.MapControl;
 import oregontrail.control.GameControl;
 
+
 /**
  *
  * @author spencer
