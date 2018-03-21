@@ -30,6 +30,8 @@ import oregontrail.view.WagonTongueView;
 import oregontrail.view.MapView;
 import oregontrail.control.MapControl;
 import oregontrail.control.GameControl;
+import oregontrail.control.RiverControl;
+import oregontrail.view.RiverView;
 
 
 /**
@@ -41,29 +43,31 @@ public class OregonTrail {
     private static Player player = null;
 
     public static void main(String[] args) {
+        try{
        
       
         
         
+        System.out.println("ClothingPurchaseView: ");
+       ClothingPurchaseView clothingPurchaseView = new ClothingPurchaseView();
+       clothingPurchaseView.display();
         
-        
-        
+        RiverView riverView = new RiverView();
+        riverView.display();
        /*Commented out for Angie's Individual Assignement
         Commented out for Spencer Individual Assignement
         System.out.println("Departure Date Menu View: ");
        DepartureDateMenuView departureDateMenuView = new DepartureDateMenuView();
-       departureDateMenuView.display();
-       System.out.println("ClothingPurchaseView: ");
-       ClothingPurchaseView clothingPurchaseView = new ClothingPurchaseView();
-       clothingPurchaseView.display();*/
+       departureDateMenuView.display();*/
+       
        /*System.out.println("startProgramView and MainMenuView: ");*/
        
        //Code to start the game.
-       StartProgramView startProgramView = new StartProgramView();
-       MainMenuView mainMenuView = new MainMenuView();
-       startProgramView.display();
-       mainMenuView.display();
-       OregonTrail.setPlayer(player);
+       //StartProgramView startProgramView = new StartProgramView();
+       //MainMenuView mainMenuView = new MainMenuView();
+       //startProgramView.display();
+       //mainMenuView.display();
+       //OregonTrail.setPlayer(player);
        
        
        
@@ -98,7 +102,12 @@ public class OregonTrail {
        //System.out.println("WagonTongueView: ");
        //WagonTongueView wagonTongueView = new WagonTongueView();
        //wagonTongueView.display();
-       
+        }
+        catch(Throwable te){
+           System.out.println("you have runtime errors " + te.getMessage());
+           te.printStackTrace();
+           return;
+        }
        
     }
 

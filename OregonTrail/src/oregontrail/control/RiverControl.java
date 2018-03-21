@@ -5,6 +5,8 @@
  */
 package oregontrail.control;
 import java.util.Random;
+import oregontrail.exceptions.RiverControlException;
+
 
 /**
  *
@@ -14,17 +16,19 @@ public class RiverControl {
     public static Random rand = new Random();
     
     // @author Spencer
-    public static int calcWidth (int month, int locationCondition){
-        
+    public static int calcWidth (int month, int locationCondition)
+        throws RiverControlException {
+         
         int widthMonth;
         int locationWidth;
         
         if (month < 0 || month > 11){
-            return -1;
+            throw new RiverControlException("The month is invalid.");
+            
         }
         
         if (locationCondition < 0 || locationCondition > 2){
-            return -1;
+            throw new RiverControlException("The location Condition is invalid.");
         }
         
         switch (month){
@@ -62,14 +66,15 @@ public class RiverControl {
 // @author Angie
 // This is the method to calculate river depth.
     
-    public static double calcDepth( int month, int previousRiverDepth){
+    public static double calcDepth( int month, int previousRiverDepth)
+        throws RiverControlException{
        
         if (month < 0 || month > 11){
-        return -1;
+           throw new RiverControlException("The month is invalid.");
         }
         
         if (previousRiverDepth < 0 || previousRiverDepth > 2){
-            return -1;
+            throw new RiverControlException("The previousRiverDepth is invalid.");
         }
         /*case 1-4 months with moderate snow melt, case 5-6 are months with heavy snow melt and any other are no snow melt */
        int snowMelt;

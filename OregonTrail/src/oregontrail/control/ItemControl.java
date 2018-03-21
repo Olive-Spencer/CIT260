@@ -5,6 +5,7 @@
  */
 package oregontrail.control;
 
+
 /**
  *
  * @author spencer
@@ -13,9 +14,20 @@ public class ItemControl {
     public static void getCurrentClothes(){
         System.out.println("Called getCurrentClothes in ItemControl");
     }
-    public static void setCurrentClothes(int amount){
+    public static int setCurrentClothes(String amount)
+    throws NumberFormatException{
+        int newAmount = 0;
+        try {
+                    newAmount = Integer.parseInt(amount);
+                } catch (NumberFormatException ex) {
+                    System.out.println("you entered an invalid number " + ex.getMessage());
+                    
+                }
+                    
+        
         System.out.println("Called setCurrentClothes() in ItemControl");
-        System.out.println("amount is:" + amount);
+        
+        return newAmount;
     }
     public static void getCurrentOxen(){
         System.out.println("Called getCurrentOxen in ItemControl");

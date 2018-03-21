@@ -20,7 +20,8 @@ public class ClothingPurchaseView extends View {
     + "\n-------------------------------------------------------------");
     }
     @Override
-        public boolean doAction(String newAmount) {
+        public boolean doAction(String newAmount) 
+        {
             Scanner inFile;
             inFile = new Scanner(System.in);
             
@@ -28,10 +29,12 @@ public class ClothingPurchaseView extends View {
             
             boolean second = false;
             
-            int amount = Integer.parseInt(newAmount);
+            
             
             ItemControl.getCurrentClothes();
-            ItemControl.setCurrentClothes(amount);
+            
+            int amount = ItemControl.setCurrentClothes(newAmount);
+            System.out.println("amount is:" + amount);
             
             while (second == false){
                 System.out.println("are you sure you want to purchase this many bundles of clothing? y/n");
