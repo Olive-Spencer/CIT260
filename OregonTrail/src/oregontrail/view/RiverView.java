@@ -42,7 +42,7 @@ public class RiverView extends View {
                     Logger.getLogger(RiverView.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 try {
-                    depth = RiverControl.calcDepth(1, -1);
+                    depth = RiverControl.calcDepth(1, 1);
                 } catch (RiverControlException ex) {
                     Logger.getLogger(RiverView.class.getName()).log(Level.SEVERE, null, ex);
                 }

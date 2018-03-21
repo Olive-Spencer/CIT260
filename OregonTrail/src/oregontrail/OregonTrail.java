@@ -48,12 +48,12 @@ public class OregonTrail {
       
         
         
-        System.out.println("ClothingPurchaseView: ");
+       System.out.println("ClothingPurchaseView: ");
        ClothingPurchaseView clothingPurchaseView = new ClothingPurchaseView();
        clothingPurchaseView.display();
         
-        RiverView riverView = new RiverView();
-        riverView.display();
+        //RiverView riverView = new RiverView();
+        //riverView.display();
        /*Commented out for Angie's Individual Assignement
         Commented out for Spencer Individual Assignement
         System.out.println("Departure Date Menu View: ");

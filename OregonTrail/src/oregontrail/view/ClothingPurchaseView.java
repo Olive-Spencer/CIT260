@@ -47,8 +47,8 @@ public class ClothingPurchaseView extends View {
                 }
                 else if (confirmChanged.matches("N"))
                 {
-                    System.out.println("Very well. Back to my other wares.");
-                    second = true;
+                    System.out.println("Very well.");
+                    return false;
                 }
                 else 
                 {
