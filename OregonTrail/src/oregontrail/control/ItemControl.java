@@ -36,13 +36,26 @@ public class ItemControl {
         System.out.println("Called setCurrentOxen() in ItemControl");
         System.out.println("amount is:" + amount);
     }
+    
+    /*Author Angie*/
   public static void getCurrentAmmunition(){
-        System.out.println("Called getCurrentOxen in ItemControl");
+        System.out.println("Called getCurrentAmmunition in ItemControl");
     }
-    public static void setCurrentAmmunition(int amount){
-        System.out.println("Called setCurrentOxen() in ItemControl");
-        System.out.println("amount is:" + amount);
+    public static int setCurrentAmmunition(String amount)
+    throws NumberFormatException{
+        int newAmount = 0;
+        try {
+                    newAmount = Integer.parseInt(amount);
+                } catch (NumberFormatException ex) {
+                    System.out.println("you entered an invalid number " + ex.getMessage());
+                    
+                }           
+        
+        System.out.println("Called setCurrentAmmunition() in ItemControl");
+        
+        return newAmount;
     }
+     /*end of Angies assignment*/   
     public static void getCurrentTongues(){
         System.out.println("Called GetCurrentTongues in ItemControl.");
     }

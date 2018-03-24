@@ -5,29 +5,35 @@
  */
 package oregontrail.control;
 
+import oregontrail.exceptions.OccupationsSortControlException;
+
 /**
  *
  * @author Angie
  */
 public class OccupationsSortControl {
     
-   public static void occupationListArray(String input){
+   public static void occupationListArray(String input)
+   throws OccupationsSortControlException {
         String[] occupationsArray = {"Banker - $1600.00", "Farmer- $400.00", "Blacksmith - $800.00", "Carpenter - $800.00", "Doctor - $1200.00", "Bandit - $0", "Trapper - $600.00"};
           
        if ("A".equals(input)){
            String[] alpha = Sort(occupationsArray);
             for(String i:alpha){
             System.out.println(i);
-            
-            
             }
         }
-            else if ("R".equals(input)){
+       else if ("R".equals(input)){
             String[] reverse = SortReverse(occupationsArray);
                 for(String i:reverse){
                 System.out.println(i);
-            }
+            }    
         }
+       else {throw new OccupationsSortControlException("Please enter a valid menu item. ");
+       }
+       
+       
+           
     }
     
      

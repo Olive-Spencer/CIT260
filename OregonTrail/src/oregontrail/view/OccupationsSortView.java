@@ -3,7 +3,10 @@
  */
 package oregontrail.view;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import oregontrail.control.OccupationsSortControl;
+import oregontrail.exceptions.OccupationsSortControlException;
 
 /**
  *
@@ -20,14 +23,18 @@ public class OccupationsSortView extends View{
     
     @Override
     public boolean doAction(String inputs){
-        switch (inputs)
-        {
-            case "A":
-            case "R":OccupationsSortControl.occupationListArray(inputs);
-            break;
-            default: System.out.println("Invalid menu item");
-        }
-        return false;
+          try {
+              switch (inputs)
+              {
+                  case "A":
+                  case "R":OccupationsSortControl.occupationListArray(inputs);
+                  break;
+              }
+              
+          } catch (OccupationsSortControlException ex) {
+              Logger.getLogger(OccupationsSortView.class.getName()).log(Level.SEVERE, null, ex);
+          }
+          return false;
     }
     
 }

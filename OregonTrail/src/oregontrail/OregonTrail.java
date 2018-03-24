@@ -31,6 +31,7 @@ import oregontrail.view.MapView;
 import oregontrail.control.MapControl;
 import oregontrail.control.GameControl;
 import oregontrail.control.RiverControl;
+import oregontrail.view.OccupationsSortView;
 import oregontrail.view.RiverView;
 
 
@@ -46,11 +47,12 @@ public class OregonTrail {
         try{
        
       
+       OccupationsSortView occupationsSortView = new OccupationsSortView();
+       occupationsSortView.display();
         
-        
-       System.out.println("ClothingPurchaseView: ");
-       ClothingPurchaseView clothingPurchaseView = new ClothingPurchaseView();
-       clothingPurchaseView.display();
+       //System.out.println("ClothingPurchaseView: ");
+       //ClothingPurchaseView clothingPurchaseView = new ClothingPurchaseView();
+       //clothingPurchaseView.display();
         
         //RiverView riverView = new RiverView();
         //riverView.display();

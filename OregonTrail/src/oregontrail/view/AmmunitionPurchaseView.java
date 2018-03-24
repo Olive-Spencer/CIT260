@@ -6,14 +6,22 @@ package oregontrail.view;
 import java.util.Scanner;
 import oregontrail.control.ItemControl;
 
+
+
 /**
  *
  * @author Angie
  */
+
+
 public class AmmunitionPurchaseView extends View {
    public AmmunitionPurchaseView(){
        super("\n"
     + "\nPlease enter the amount of bullets you would like to buy."
+    + "\n You can purchase the following boxes of bullets:"
+    + "\n Choose 20 to buy a box of 20 bullets." 
+    + "\n Choose 50 to buy a box of 50 bullets."
+    + "\n Choose 100 to buy a box of 100 bullets." 
     + "\nPress Q to go view my other wares."  
     + "\n----------------------------------------------------------------");
    } 
@@ -26,10 +34,11 @@ public class AmmunitionPurchaseView extends View {
             
             boolean second = false;
             
-            int amount = Integer.parseInt(newAmount);
-            
             ItemControl.getCurrentAmmunition();
-            ItemControl.setCurrentAmmunition(amount);
+            
+            int amount = ItemControl.setCurrentAmmunition(newAmount);
+            
+            System.out.println("amount is:" + amount);
             
             while (second == false){
                 System.out.println("are you sure you want to purchase this many bullets? y/n");
