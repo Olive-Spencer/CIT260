@@ -59,7 +59,7 @@ public abstract class View implements ViewInterface {
                 System.out.println("\n*** You must enter a non-blank value ***");
                 continue;
             }
-           
+                       
             break;
         }
         value = value.toUpperCase();

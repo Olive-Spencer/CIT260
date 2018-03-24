@@ -5,6 +5,7 @@
  */
 package oregontrail.control;
 import java.util.Random;
+import oregontrail.exceptions.TrailControlException;
 
 
 
@@ -16,15 +17,50 @@ public class TrailControl {
     public static Random rand = new Random();
     
     
+    public static void randomWeather() throws TrailControlException{
+        
+        //these items will be passed in depending on the current month and location condition
+        int locationC = -1;
+        int month = 2;
+        
+        double weatherStatus = calcWeather(locationC, month);
+        
+        if (weatherStatus % 1 == 0){
+            int weatherInt = (int) Math.round(weatherStatus); 
+            switch (weatherInt) {
+                case 1: System.out.println("It's snowing! You lose 5 days");
+                        break;
+                case 2: System.out.println("It's hailing in the desert! Seek shelter. You lose 1 day");
+                        break;
+                case 3: System.out.println("It's raining making it difficult to move forward. You lose 2 days");
+                        break;
+                case 6: System.out.println("It rains and makes the rocks slick. You lose 2 days!");
+                        break;
+                case 7: System.out.println("A summer flood hits the desert! You lose 5 days!");
+                        break;
+                case 8: System.out.println("A summer storm inpeads your progress! You lose 2 days!");
+                        break;
+                case 11: System.out.println("A cold mountain storm hits. You lose 5 days!");
+                         break;
+                case 12: System.out.println("It's unusually hot and you need to rest. Lose 2 days!");
+                         break;
+                case 13: System.out.println("Windy weather tips over the wagon! Lose 3 days to clean up!");
+                         break;
+                default: break;
+        }
+        }
+    }
     
-    public static double calcWeather(int locationCondition, int month){
+    
+    
+    public static double calcWeather(int locationCondition, int month) throws TrailControlException{
         int weatherMonth=0;
         
         if (month < 0 || month > 11){ 
-            return -1;
+            throw new TrailControlException("The month is invalid.");
         }
         if (locationCondition < 0 || locationCondition > 2){
-            return -1;
+            throw new TrailControlException("The locationCondition is invalid.");
         }
         if (month == 10 || month == 11 || month == 0 || month == 1){
             weatherMonth = 0;
@@ -39,10 +75,10 @@ public class TrailControl {
         double randomNumber = rand.nextInt(10);
 
         if (randomNumber < 0 || randomNumber > 10){
-            return -1;
+            throw new TrailControlException("The RandomNumber is invalid");
         }
 //the random number has been replaced with the first 10 below for test purposes.        
-        double weatherStatus = locationCondition + weatherMonth + (10/ 10);
+        double weatherStatus = locationCondition + weatherMonth + (randomNumber/ 10);
 
         return weatherStatus;
 
