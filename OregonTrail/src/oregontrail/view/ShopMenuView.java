@@ -34,19 +34,19 @@ public class ShopMenuView extends View {
         {
             case "F": buyingFoodView.display();
             break;
-            case "C": System.out.println("You are now buying clothes!");
+            case "C": this.console.println("You are now buying clothes!");
             break;
             case "O": oxenPurchaseView.display();
             break;
             case "T": wagonTongueView.display();
             break;
-            case "W": System.out.println("You are now buying Wagon Wheels!");
+            case "W": this.console.println("You are now buying Wagon Wheels!");
             break;
             case "B": ammunitionPurchaseView.display();
             break;
-            case "Q": System.out.println("Come back soon!");
+            case "Q": this.console.println("Come back soon!");
                       return true;
-            default: System.out.println("Invalid menu item");
+            default: this.console.println("Invalid menu item");
         }
         return false;
     }

@@ -5,7 +5,10 @@
  */
 package oregontrail.view;
 
+import java.io.IOException;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import oregontrail.control.FoodControl;
 
 /**
@@ -21,16 +24,20 @@ public class BuyingFoodView extends View {
         
         @Override
         public boolean doAction(String inputs) {
-            Scanner inFile;
-            inFile = new Scanner(System.in);
+            String inFile = null;
+        try {
+            inFile = this.keyboard.readLine();
+        } catch (IOException ex) {
+            Logger.getLogger(BuyingFoodView.class.getName()).log(Level.SEVERE, null, ex);
+        }
             String newAgain;
             boolean second = false;
             int amount = Integer.parseInt(inputs);
             FoodControl.getCurrentFood();
             FoodControl.setCurrentFood(amount);
             while (second == false){
-            System.out.println("Do you want to buy more? y/n");
-            String again = inFile.nextLine();
+            this.console.println("Do you want to buy more? y/n");
+            String again = inFile;
             newAgain = again.trim().toUpperCase();
             if (newAgain.matches("Y"))
             {
@@ -41,12 +48,12 @@ public class BuyingFoodView extends View {
             }
             else if (newAgain.matches("N"))
             {
-                System.out.println("Very well. Back to my other wares.");
+                this.console.println("Very well. Back to my other wares.");
                 second = true;
             }
             else 
             {
-                System.out.println("Please enter a valid value.");
+                this.console.println("Please enter a valid value.");
                 continue;
             }
             }

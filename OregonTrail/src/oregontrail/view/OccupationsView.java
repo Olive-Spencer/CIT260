@@ -28,22 +28,22 @@ public class OccupationsView extends View {
         
         switch (menuItem)
         {
-            case "1": System.out.println("You have chosen to be a Banker from Boston!");
+            case "1": this.console.println("You have chosen to be a Banker from Boston!");
             break;
-            case "2": System.out.println("You have chosen to be a Carpenter from Ohio!");
+            case "2": this.console.println("You have chosen to be a Carpenter from Ohio!");
             break;
-            case "3": System.out.println("You have chosen to be a Farmer from Illinois!");
+            case "3": this.console.println("You have chosen to be a Farmer from Illinois!");
             break;
-            case "4": System.out.println("You have chosen to be a Blacksmith from Missouri!");
+            case "4": this.console.println("You have chosen to be a Blacksmith from Missouri!");
             break;
-            case "5": System.out.println("You have chosen to be a Doctor from Kentucky!");
+            case "5": this.console.println("You have chosen to be a Doctor from Kentucky!");
             break;
-            case "6": System.out.println("You have chosen to be a Bandit!");
+            case "6": this.console.println("You have chosen to be a Bandit!");
             break;
-            case "7": System.out.println("You have chosen to be a Trapper!");
+            case "7": this.console.println("You have chosen to be a Trapper!");
             break;
             case "Q": return true;
-            default: System.out.println("Invalid menu item");
+            default: this.console.println("Invalid menu item");
            
         }
        

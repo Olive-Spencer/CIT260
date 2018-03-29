@@ -24,12 +24,12 @@ public class GoldPanningView extends View {
         
         switch (panChoice)
         {
-            case "Y": System.out.println("Congradulations, you panned for gold and found some! You sold this gold for 100 dollars!");
+            case "Y": this.console.println("Congradulations, you panned for gold and found some! You sold this gold for 100 dollars!");
             break;
-            case "N": System.out.println("Very well. Back to travel menu.");
+            case "N": this.console.println("Very well. Back to travel menu.");
             break;
             case "Q": return true;
-            default: System.out.println("Invalid menu item");
+            default: this.console.println("Invalid menu item");
         }
        
         return false;

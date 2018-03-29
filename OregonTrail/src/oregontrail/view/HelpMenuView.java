@@ -32,9 +32,9 @@ public class HelpMenuView extends View {
         OccupationsSortView occupationsSortView = new OccupationsSortView();
         switch (menuItem)
         {
-            case "G": System.out.println("The goal of the game is to get at least one person to Oregon.");
+            case "G": this.console.println("The goal of the game is to get at least one person to Oregon.");
             break;
-            case "E": System.out.println("More on resource estimates coming soon.");
+            case "E": this.console.println("More on resource estimates coming soon.");
             break;
             case "O": occupationsSortView.display();
             break;
@@ -43,7 +43,7 @@ public class HelpMenuView extends View {
             case "L": locationSorting.display();
             break;
             case "Q": return true;
-            default: System.out.println("Invalid menu item");
+            default: this.console.println("Invalid menu item");
         }
         return false;
     }

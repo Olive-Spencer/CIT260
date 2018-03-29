@@ -5,7 +5,10 @@
  */
 package oregontrail.view;
 
+import java.io.IOException;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import oregontrail.control.ItemControl;
 
 /**
@@ -19,8 +22,12 @@ public class WagonTongueView extends View{
     
        @Override
         public boolean doAction(String newAmount) {
-            Scanner inFile;
-            inFile = new Scanner(System.in);
+            String inFile = null;
+        try {
+            inFile = this.keyboard.readLine();
+        } catch (IOException ex) {
+            Logger.getLogger(WagonTongueView.class.getName()).log(Level.SEVERE, null, ex);
+        }
             
             String confirm;
             
@@ -31,24 +38,24 @@ public class WagonTongueView extends View{
 
             
             while (second == false){
-                System.out.println("Are you sure you want to purchase this many wagon tongues? y/n");
-                confirm = inFile.nextLine();
+                this.console.println("Are you sure you want to purchase this many wagon tongues? y/n");
+                confirm = inFile;
                 String confirmChanged = confirm.trim().toUpperCase();
                 if (confirmChanged.matches("Y"))
                 {
-                    System.out.println("You purchased " + amount + " wagon tongues.");
+                    this.console.println("You purchased " + amount + " wagon tongues.");
                     ItemControl.getCurrentTongues();
                     ItemControl.setCurrentTongues(amount);
                     second = true;
                 }
                 else if (confirmChanged.matches("N"))
                 {
-                    System.out.println("Very well. Back to my other wares.");
+                    this.console.println("Very well. Back to my other wares.");
                     second = true;
                 }
                 else 
                 {
-                    System.out.println("Please enter a valid value.");
+                    this.console.println("Please enter a valid value.");
                 }
             }
               return true;

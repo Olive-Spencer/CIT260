@@ -26,7 +26,7 @@ public class ItemListHelpView extends View {
             case "A":
             case "R":ItemListHelpMenuControl.helpArray(inputs);
             break;
-            default: System.out.println("Invalid menu item");
+            default: this.console.println("Invalid menu item");
         }
         return false;
     }

@@ -3,7 +3,10 @@
  */
 package oregontrail.view;
 
+import java.io.IOException;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import oregontrail.control.ItemControl;
 
 
@@ -26,9 +29,14 @@ public class AmmunitionPurchaseView extends View {
     + "\n----------------------------------------------------------------");
    } 
    @Override
-        public boolean doAction(String newAmount) {
-            Scanner inFile;
-            inFile = new Scanner(System.in);
+        public boolean doAction(String amount) {
+            
+            String inFile = null;
+       try {
+           inFile = this.keyboard.readLine();
+       } catch (IOException ex) {
+           Logger.getLogger(AmmunitionPurchaseView.class.getName()).log(Level.SEVERE, null, ex);
+       }
             
             String confirm;
             
@@ -36,27 +44,35 @@ public class AmmunitionPurchaseView extends View {
             
             ItemControl.getCurrentAmmunition();
             
-            int amount = ItemControl.setCurrentAmmunition(newAmount);
             
-            System.out.println("amount is:" + amount);
+            int intAmount = 0; 
+              try {
+                   intAmount = Integer.parseInt(amount);
+                } catch (NumberFormatException ex) {
+                    ErrorView.display(this.getClass().getName(),"you entered an invalid number " + ex.getMessage());
+                    
+                }  
+            
+             int passedAmount = ItemControl.setCurrentAmmunition(intAmount);
+            this.console.println("amount is:" + passedAmount);
             
             while (second == false){
-                System.out.println("are you sure you want to purchase this many bullets? y/n");
-                confirm = inFile.nextLine();
+                this.console.println("are you sure you want to purchase this many bullets? y/n");
+                confirm = inFile;
                 String confirmChanged = confirm.trim().toUpperCase();
                 if (confirmChanged.matches("Y"))
                 {
-                    System.out.println("Congradulations, You purchased " + amount + " bullets!");
+                    this.console.println("Congradulations, You purchased " + amount + " bullets!");
                     second = true;
                 }
                 else if (confirmChanged.matches("N"))
                 {
-                    System.out.println("Very well. Back to my other wares.");
+                    this.console.println("Very well. Back to my other wares.");
                     second = true;
                 }
                 else 
                 {
-                    System.out.println("Please enter a valid value.");
+                    this.console.println("Please enter a valid value.");
                 }
             }
               return true;

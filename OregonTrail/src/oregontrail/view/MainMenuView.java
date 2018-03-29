@@ -43,7 +43,7 @@ public class MainMenuView extends View {
                 case "S": shopMenu();
                 break;
                 case "Q": return true;
-                default: System.out.println("Invalid menu item");                
+                default: this.console.println("Invalid menu item");                
             }
             return false;
         }

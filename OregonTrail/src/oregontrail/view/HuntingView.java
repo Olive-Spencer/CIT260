@@ -11,6 +11,6 @@ package oregontrail.view;
  */
 public class HuntingView {
     public void display(){
-        System.out.println("HuntingView() class called.");
+        //this.console.println("HuntingView() class called.");
     }
 }

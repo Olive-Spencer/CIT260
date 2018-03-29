@@ -5,7 +5,10 @@
  */
 package oregontrail.view;
 
+import java.io.IOException;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -34,25 +37,29 @@ public class DepartureDateMenuView extends View {
         
         switch (menuItem)
         {
-            case "1": System.out.println("You have chosen to leave in March!");
+            case "1": this.console.println("You have chosen to leave in March!");
             break;
-            case "2": System.out.println("You have chosen to leave in April!");
+            case "2": this.console.println("You have chosen to leave in April!");
             break;
-            case "3": System.out.println("You have chosen to leave in May!");
+            case "3": this.console.println("You have chosen to leave in May!");
             break;
-            case "4": System.out.println("You have chosen to leave in June!");
+            case "4": this.console.println("You have chosen to leave in June!");
             break;
-            case "5": System.out.println("You have chosen to leave in July!");
+            case "5": this.console.println("You have chosen to leave in July!");
             break;
             case "Q": return true;
-            default: System.out.println("Invalid menu item");
+            default: this.console.println("Invalid menu item");
         }
-        System.out.println("are you ok with leaving at this time? y/n");
-        Scanner inFile;
-        inFile = new Scanner(System.in);
-        String confirmation = inFile.nextLine();
+        this.console.println("are you ok with leaving at this time? y/n");
+        String inFile = null;
+        try {
+            inFile = this.keyboard.readLine();
+        } catch (IOException ex) {
+            Logger.getLogger(DepartureDateMenuView.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
         String adjustConfirm;
-        adjustConfirm = confirmation.trim().toUpperCase();
+        adjustConfirm = inFile.trim().toUpperCase();
                 
         switch (adjustConfirm)
         {

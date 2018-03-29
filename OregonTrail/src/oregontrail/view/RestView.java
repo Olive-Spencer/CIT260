@@ -11,6 +11,6 @@ package oregontrail.view;
  */
 public class RestView {
     public void display(){
-        System.out.println("RestView() class called.");
+        //this.console.println("RestView() class called.");
     }
 }

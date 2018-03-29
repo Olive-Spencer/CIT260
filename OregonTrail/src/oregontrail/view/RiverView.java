@@ -47,8 +47,8 @@ public class RiverView extends View {
                     Logger.getLogger(RiverView.class.getName()).log(Level.SEVERE, null, ex);
                 }
                     
-                System.out.println(width);
-                System.out.println(depth);
+                this.console.println(width);
+                this.console.println(depth);
                 
                 
                     
@@ -56,12 +56,12 @@ public class RiverView extends View {
                 }
                 else if (inputs.matches("N"))
                 {
-                    System.out.println("Very well. you won't cross yet.");
+                    this.console.println("Very well. you won't cross yet.");
                     second = true;
                 }
                 else 
                 {
-                    System.out.println("Please enter a valid value.");
+                    this.console.println("Please enter a valid value.");
                 }
             
             return true;

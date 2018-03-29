@@ -10,6 +10,7 @@ package oregontrail.view;
  * @author spencer, angie, coby
  */
 public interface ViewInterface {
+    
     public void display();
     public String getInputs();
     public boolean doAction(String value);

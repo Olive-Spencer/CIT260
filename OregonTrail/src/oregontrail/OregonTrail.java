@@ -5,6 +5,10 @@
  */
 package oregontrail;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import oregontrail.model.Game;
 import java.util.ArrayList;
 import oregontrail.control.ItemListHelpMenuControl;
@@ -43,12 +47,23 @@ import oregontrail.view.TrailView;
 public class OregonTrail {
     private static Game currentGame = null;
     private static Player player = null;
+    
+    private static PrintWriter outFile = null;
+    private static BufferedReader inFile= null;
+    private static PrintWriter logFile = null;
 
     public static void main(String[] args) {
+        
+    
         try{
+            
+                OregonTrail.inFile =
+                    new BufferedReader(new InputStreamReader(System.in));
+                OregonTrail.outFile = new PrintWriter(System.out, true);
+                logFile = new PrintWriter("logFile.txt");
        
-       TrailView trailView = new TrailView();
-       trailView.display();
+       //TrailView trailView = new TrailView();
+       //trailView.display();
        //OccupationsSortView occupationsSortView = new OccupationsSortView();
        //occupationsSortView.display();
         
@@ -77,10 +92,10 @@ public class OregonTrail {
        
        //System.out.println("startProgramView and MainMenuView: ");
        //StartProgramView startProgramView = new StartProgramView();
-       //MainMenuView mainMenuView = new MainMenuView();
+       MainMenuView mainMenuView = new MainMenuView();
        //startProgramView.display();
-       //mainMenuView.display();
-       //OregonTrail.setPlayer(player);
+       mainMenuView.display();
+       OregonTrail.setPlayer(player);
        /*System.out.println("Occupations View: ");
        OccupationsView occupationsView = new OccupationsView();
        occupationsView.display();
@@ -106,15 +121,32 @@ public class OregonTrail {
        //System.out.println("WagonTongueView: ");
        //WagonTongueView wagonTongueView = new WagonTongueView();
        //wagonTongueView.display();
+       
         }
         catch(Throwable te){
            System.out.println("you have runtime errors " + te.getMessage());
            te.printStackTrace();
            return;
         }
-       
+        
+        finally {
+            
+            try{
+            if(OregonTrail.inFile != null)    
+                OregonTrail.inFile.close();
+            
+            if(OregonTrail.outFile != null)
+                OregonTrail.outFile.close();
+            
+            if (logFile != null)
+                logFile.close(); 
+        } catch (IOException ex) {
+          System.out.println("Error closing files");
+          return;
+        }
+        }
     }
-
+        
     public static Game getCurrentGame() {
         return currentGame;
     }
@@ -130,5 +162,30 @@ public class OregonTrail {
     public static void setPlayer(Player player) {
         OregonTrail.player = player;
     }
+
+    public static PrintWriter getOutFile() {
+        return outFile;
+    }
+
+    public static void setOutFile(PrintWriter outFile) {
+        OregonTrail.outFile = outFile;
+    }
+
+    public static BufferedReader getInFile() {
+        return inFile;
+    }
+
+    public static void setInFile(BufferedReader infile) {
+        OregonTrail.inFile = infile;
+    }
+
+    public static PrintWriter getLogFile() {
+        return logFile;
+    }
+
+    public static void setLogFile(PrintWriter logFile) {
+        OregonTrail.logFile = logFile;
+    }
+    
     
 }

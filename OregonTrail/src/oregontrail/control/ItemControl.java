@@ -5,6 +5,8 @@
  */
 package oregontrail.control;
 
+import oregontrail.view.ErrorView;
+
 
 /**
  *
@@ -14,20 +16,14 @@ public class ItemControl {
     public static void getCurrentClothes(){
         System.out.println("Called getCurrentClothes in ItemControl");
     }
-    public static int setCurrentClothes(String amount)
+    public static int setCurrentClothes(int amount)
     throws NumberFormatException{
-        int newAmount = 0;
-        try {
-                    newAmount = Integer.parseInt(amount);
-                } catch (NumberFormatException ex) {
-                    System.out.println("you entered an invalid number " + ex.getMessage());
-                    
-                }
-                    
+        
+                       
         
         System.out.println("Called setCurrentClothes() in ItemControl");
         
-        return newAmount;
+        return amount;
     }
     public static void getCurrentOxen(){
         System.out.println("Called getCurrentOxen in ItemControl");
@@ -41,15 +37,10 @@ public class ItemControl {
   public static void getCurrentAmmunition(){
         System.out.println("Called getCurrentAmmunition in ItemControl");
     }
-    public static int setCurrentAmmunition(String amount)
+    public static int setCurrentAmmunition(int amount)
     throws NumberFormatException{
         int newAmount = 0;
-        try {
-                    newAmount = Integer.parseInt(amount);
-                } catch (NumberFormatException ex) {
-                    System.out.println("you entered an invalid number " + ex.getMessage());
-                    
-                }           
+               
         
         System.out.println("Called setCurrentAmmunition() in ItemControl");
         

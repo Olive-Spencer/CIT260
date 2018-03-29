@@ -5,6 +5,10 @@
  */
 package oregontrail.control;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import oregontrail.exceptions.GameControlException;
 import oregontrail.model.Actor;
 import oregontrail.model.Game;
 import oregontrail.model.Player;
@@ -51,4 +55,20 @@ public class GameControl {
         player.setName(name);
         return player;
     }
+        
+        public static void saveGame(Game game, String filePath) throws GameControlException, IOException{
+            //if(game == null || filePath == null || filePath.length() < 1 )
+                //throw new GameControlException("invald entry");
+            
+            try (ObjectOutputStream out =
+                    new ObjectOutputStream(new FileOutputStream(filePath))){
+                out.writeObject(game);
+            } catch (IOException ex) {
+                System.out.println("I/O Error: " + ex.getMessage());
+                
+            }
+             
+                
+            
+        }
 }

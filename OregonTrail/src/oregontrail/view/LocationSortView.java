@@ -15,15 +15,15 @@ public class LocationSortView extends View{
     private LocationSortControl calcLocation = new LocationSortControl();
     @Override
             public void display(){
-    System.out.println("\n"
+    this.console.println("\n"
     + "\nWhile on the trail, you will visit many different locations. They are "
     + "listed below, along with the average distance between each location."
     + "\nHere are all of the locations you're going to visit in the game:");
         for (LocationNames location : locations){
-            System.out.println(location);
+            this.console.println(location);
         }
 
-        System.out.println("\nYou will travel a total of 2000 miles on the "
+        this.console.println("\nYou will travel a total of 2000 miles on the "
                 + "trail, but the average distance between each location is "
                 + calcLocation.calcAverageMiles() + " miles.");
     }

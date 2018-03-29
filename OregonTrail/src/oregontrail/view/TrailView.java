@@ -27,26 +27,27 @@ public class TrailView extends View {
     @Override
         public boolean doAction(String inputs){
             
-            int inputInt=0;
+            int inputInt;
             try{
             inputInt = Integer.parseInt(inputs);
             }
             catch(NumberFormatException ex){
-            System.out.println(ex.getMessage() + "you must enter a number" );
-            return false;
+            ErrorView.display(this.getClass().getName(),
+                            "Error reading input: " + ex.getMessage());
+            return true;
             }
        
         if(inputInt == 1){
         try {
             TrailControl.randomWeather();
         } catch (TrailControlException ex) {
-            System.out.println(ex.getMessage());
-            Logger.getLogger(TrailView.class.getName()).log(Level.SEVERE, null, ex);
+            ErrorView.display(this.getClass().getName(),
+                            "Error reading input: " + ex.getMessage());
         }
-    System.out.println("You continue on the trail!");
+    this.console.println("You continue on the trail!");
         }
         else
-            System.out.println("you changed your mind.");
+            this.console.println("you changed your mind.");
         
         return true;
     

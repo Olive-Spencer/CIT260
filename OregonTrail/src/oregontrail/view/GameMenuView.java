@@ -22,6 +22,7 @@ public class GameMenuView extends View{
     + "\n-------------------------------------------------------------"
     + "\n| Game Menu                                                 |"
     + "\n-------------------------------------------------------------"
+    + "\nG - Save the game"
     + "\nR - Rest"
     + "\nM - View Map"
     + "\nH - Go hunting"
@@ -38,6 +39,8 @@ public class GameMenuView extends View{
             {
                 case "R": rest();
                 break;
+                case "G":saveGame();
+                break;
                 case "M": map.display();
                 break;
                 case "H": goHunting();
@@ -45,7 +48,7 @@ public class GameMenuView extends View{
                 case "N": locationNumber++;
                 return nextLocation();
                 case "Q": return true;
-                default: System.out.println("Invalid menu item");                
+                default: this.console.println("Invalid menu item");                
             }
             return false;
         }
@@ -61,11 +64,11 @@ public class GameMenuView extends View{
     public boolean nextLocation(){
         if (locationNumber == 26)
         {
-            System.out.println("YOU WIN THE GAME QUIT TRYING TO MOVE FORWARD OR YOU WILL DROWN. SIR.");
+            this.console.println("YOU WIN THE GAME QUIT TRYING TO MOVE FORWARD OR YOU WILL DROWN. SIR.");
             return true;
         }
             map.setMiles(locations[locationNumber].getMiles());
-            System.out.println("You have arrived at " + locations[locationNumber]);
+            this.console.println("You have arrived at " + locations[locationNumber]);
             return false;
         
     }
@@ -76,5 +79,11 @@ public class GameMenuView extends View{
 
         }
         return false;
+    }
+    
+    public void saveGame() {
+        SaveGameView saveGameView = new SaveGameView();
+        saveGameView.display();
+        
     }
 }
