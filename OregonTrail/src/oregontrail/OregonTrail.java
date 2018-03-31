@@ -62,8 +62,7 @@ public class OregonTrail {
                     new BufferedReader(new InputStreamReader(System.in));
                 OregonTrail.outFile = new PrintWriter(System.out, true);
                 logFile = new PrintWriter("logFile.txt");
-       LocationPrintView locationPrintView = new LocationPrintView();
-       locationPrintView.display();
+       
        //TrailView trailView = new TrailView();
        //trailView.display();
        //OccupationsSortView occupationsSortView = new OccupationsSortView();
@@ -105,8 +104,8 @@ public class OregonTrail {
        GoldPanningView goldPanningView = new GoldPanningView();
        goldPanningView.display();
        System.out.println("HelpMenuView: ");*/
-       //HelpMenuView helpMenuView = new HelpMenuView();
-       //helpMenuView.display();
+       HelpMenuView helpMenuView = new HelpMenuView();
+       helpMenuView.display();
        /*
        System.out.println("ShopMenuView: ");
        ShopMenuView shopMenuView = new ShopMenuView();

@@ -30,12 +30,14 @@ public abstract class View implements ViewInterface {
     }
     
     public View(String message) {
-        //this.displayMessage = message;
-        this.console.println(message);
+        displayMessage = message;
+        
     }
     
     @Override
     public void display() {
+        
+        
         
         
         boolean endOfView;
@@ -62,6 +64,8 @@ public abstract class View implements ViewInterface {
        
         boolean valid = false;
         String value = null;
+        
+        this.console.println(displayMessage);
         
         while(!valid)
         {

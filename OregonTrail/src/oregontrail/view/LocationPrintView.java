@@ -54,12 +54,13 @@ public class LocationPrintView extends View {
                 int i = 0; 
                 out.printf("%n%-30s%7d%13s", locationNames
                                              , locationNames.getMiles()
-                                             , locationNames.getType());
+                                             , locationNames.getType());}
+                out.flush();
                 this.console.println("\nSuccess. The file has been saved @ " + inputs);
                 
             }
             
-        } catch (IOException ex) {
+         catch (IOException ex) {
             ErrorView.display(this.getClass().getName(),
                             "Error writing file " + ex.getMessage());
         }

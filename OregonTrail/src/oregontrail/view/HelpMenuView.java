@@ -28,25 +28,41 @@ public class HelpMenuView extends View {
         @Override
         public boolean doAction(String inputs) {
         String menuItem = inputs;
-        ItemListHelpView itemListHelpView = new ItemListHelpView();
-        LocationSortView locationSorting = new LocationSortView();
-        OccupationsSortView occupationsSortView = new OccupationsSortView();
-        LocationPrintView locationPrintView = new LocationPrintView();
+        
+        
+        
+        
+        
+        
+        
         switch (menuItem)
         {
-            case "G": this.console.println("The goal of the game is to get at least one person to Oregon.");
-            break;
-            case "E": this.console.println("More on resource estimates coming soon.");
-            break;
-            case "O": occupationsSortView.display();
-            break;
-            case "I": itemListHelpView.display();
-            break;
-            case "L": locationSorting.display();
-            break;
-            case "P": locationPrintView.display();
-            case "Q": return true;
-            default: this.console.println("Invalid menu item");
+            case "G": 
+                this.console.println("The goal of the game is to get at least one person to Oregon.");
+                break;
+            case "E": 
+                this.console.println("More on resource estimates coming soon.");
+                break;
+            case "O": 
+                OccupationsSortView occupationsSortView = new OccupationsSortView();
+                occupationsSortView.display();
+                break;
+            case "I": 
+                ItemListHelpView itemListHelpView = new ItemListHelpView();
+                itemListHelpView.display();
+                break;
+            case "L": 
+                LocationSortView locationSorting = new LocationSortView();
+                locationSorting.display();
+                break;
+            case "P": 
+                LocationPrintView locationPrintView = new LocationPrintView();
+                locationPrintView.display();
+                break;
+            case "Q": 
+                return true;
+            default: 
+                this.console.println("Invalid menu item");
         }
         return false;
     }
