@@ -18,6 +18,7 @@ public class HelpMenuView extends View {
         + "\nO - List of Occupations"
         + "\nI - List of Items and Weight"
         + "\nL - List of locations and the average distance between them"
+        + "\nP - Print list of locations to file"
         + "\nQ - Quit to main menu"
         + "\nPlease enter your choice:");
     }
@@ -30,6 +31,7 @@ public class HelpMenuView extends View {
         ItemListHelpView itemListHelpView = new ItemListHelpView();
         LocationSortView locationSorting = new LocationSortView();
         OccupationsSortView occupationsSortView = new OccupationsSortView();
+        LocationPrintView locationPrintView = new LocationPrintView();
         switch (menuItem)
         {
             case "G": this.console.println("The goal of the game is to get at least one person to Oregon.");
@@ -42,6 +44,7 @@ public class HelpMenuView extends View {
             break;
             case "L": locationSorting.display();
             break;
+            case "P": locationPrintView.display();
             case "Q": return true;
             default: this.console.println("Invalid menu item");
         }

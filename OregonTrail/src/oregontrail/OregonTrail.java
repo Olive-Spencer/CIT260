@@ -38,6 +38,7 @@ import oregontrail.control.RiverControl;
 import oregontrail.view.OccupationsSortView;
 import oregontrail.view.RiverView;
 import oregontrail.view.TrailView;
+import oregontrail.view.LocationPrintView;
 
 
 /**
@@ -61,7 +62,8 @@ public class OregonTrail {
                     new BufferedReader(new InputStreamReader(System.in));
                 OregonTrail.outFile = new PrintWriter(System.out, true);
                 logFile = new PrintWriter("logFile.txt");
-       
+       LocationPrintView locationPrintView = new LocationPrintView();
+       locationPrintView.display();
        //TrailView trailView = new TrailView();
        //trailView.display();
        //OccupationsSortView occupationsSortView = new OccupationsSortView();
@@ -92,9 +94,9 @@ public class OregonTrail {
        
        //System.out.println("startProgramView and MainMenuView: ");
        //StartProgramView startProgramView = new StartProgramView();
-       MainMenuView mainMenuView = new MainMenuView();
+       //MainMenuView mainMenuView = new MainMenuView();
        //startProgramView.display();
-       mainMenuView.display();
+       //mainMenuView.display();
        OregonTrail.setPlayer(player);
        /*System.out.println("Occupations View: ");
        OccupationsView occupationsView = new OccupationsView();
