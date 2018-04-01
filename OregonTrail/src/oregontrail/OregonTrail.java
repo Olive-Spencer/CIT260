@@ -39,6 +39,7 @@ import oregontrail.view.OccupationsSortView;
 import oregontrail.view.RiverView;
 import oregontrail.view.TrailView;
 import oregontrail.view.LocationPrintView;
+import oregontrail.view.OccupationPrintView;
 
 
 /**
@@ -83,9 +84,9 @@ public class OregonTrail {
        /*System.out.println("startProgramView and MainMenuView: ");*/
        
        //Code to start the game.
-       //StartProgramView startProgramView = new StartProgramView();
+       StartProgramView startProgramView = new StartProgramView();
        //MainMenuView mainMenuView = new MainMenuView();
-       //startProgramView.display();
+       startProgramView.display();
        //mainMenuView.display();
        //OregonTrail.setPlayer(player);
        

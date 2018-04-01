@@ -19,6 +19,7 @@ public class HelpMenuView extends View {
         + "\nI - List of Items and Weight"
         + "\nL - List of locations and the average distance between them"
         + "\nP - Print list of locations to file"
+        + "\nR - Print a list of Occupations"
         + "\nQ - Quit to main menu"
         + "\nPlease enter your choice:");
     }
@@ -58,6 +59,10 @@ public class HelpMenuView extends View {
             case "P": 
                 LocationPrintView locationPrintView = new LocationPrintView();
                 locationPrintView.display();
+                break;
+             case "R": 
+                OccupationPrintView occupationPrintView = new OccupationPrintView();
+                occupationPrintView.display();
                 break;
             case "Q": 
                 return true;
