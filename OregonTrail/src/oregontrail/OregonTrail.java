@@ -65,70 +65,16 @@ public class OregonTrail {
                 OregonTrail.outFile = new PrintWriter(System.out, true);
                 logFile = new PrintWriter("logFile.txt");
        
-       //TrailView trailView = new TrailView();
-       //trailView.display();
-       //OccupationsSortView occupationsSortView = new OccupationsSortView();
-       //occupationsSortView.display();
-        
-       //System.out.println("ClothingPurchaseView: ");
-       //ClothingPurchaseView clothingPurchaseView = new ClothingPurchaseView();
-       //clothingPurchaseView.display();
-        
-        //RiverView riverView = new RiverView();
-        //riverView.display();
-       /*Commented out for Angie's Individual Assignement
-        Commented out for Spencer Individual Assignement
-        System.out.println("Departure Date Menu View: ");
-       DepartureDateMenuView departureDateMenuView = new DepartureDateMenuView();
-       departureDateMenuView.display();*/
-       
-       /*System.out.println("startProgramView and MainMenuView: ");*/
+     
        
        //Code to start the game.
        StartProgramView startProgramView = new StartProgramView();
        MainMenuView mainMenuView = new MainMenuView();
        startProgramView.display();
        mainMenuView.display();
-       //TrailControl trailControl = new TrailControl();
-       //trailControl.randomWeather();
        
-       
-       //OregonTrail.setPlayer(player);
-       
-       
-       
-       //System.out.println("startProgramView and MainMenuView: ");
-       //StartProgramView startProgramView = new StartProgramView();
-       //MainMenuView mainMenuView = new MainMenuView();
-       //startProgramView.display();
-       //mainMenuView.display();
        OregonTrail.setPlayer(player);
-       /*System.out.println("Occupations View: ");
-       OccupationsView occupationsView = new OccupationsView();
-       occupationsView.display();
-       System.out.println("Gold Panning View: ");
-       GoldPanningView goldPanningView = new GoldPanningView();
-       goldPanningView.display();
-       System.out.println("HelpMenuView: ");*/
-       //HelpMenuView helpMenuView = new HelpMenuView();
-       //helpMenuView.display();
-       /*
-       System.out.println("ShopMenuView: ");
-       ShopMenuView shopMenuView = new ShopMenuView();
-       shopMenuView.display();
-       System.out.println("BuyingFoodView: ");
-       BuyingFoodView buyingFoodView = new BuyingFoodView();
-       buyingFoodView.display();
-       System.out.println("OxenPurchaseView: ");
-       OxenPurchaseView oxenPurchaseView = new OxenPurchaseView();
-       oxenPurchaseView.display();*/
-       //System.out.println("AmmunitionPurchaseView: ");
-       //AmmunitionPurchaseView ammunitionPurchaseView = new AmmunitionPurchaseView();
-       //ammunitionPurchaseView.display();
-       //System.out.println("WagonTongueView: ");
-       //WagonTongueView wagonTongueView = new WagonTongueView();
-       //wagonTongueView.display();
-       
+      
         }
         catch(Throwable te){
            System.out.println("you have runtime errors " + te.getMessage());
