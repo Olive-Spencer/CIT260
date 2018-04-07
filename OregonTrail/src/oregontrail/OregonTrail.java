@@ -35,6 +35,7 @@ import oregontrail.view.MapView;
 import oregontrail.control.MapControl;
 import oregontrail.control.GameControl;
 import oregontrail.control.RiverControl;
+import oregontrail.control.TrailControl;
 import oregontrail.view.OccupationsSortView;
 import oregontrail.view.RiverView;
 import oregontrail.view.TrailView;
@@ -85,9 +86,13 @@ public class OregonTrail {
        
        //Code to start the game.
        StartProgramView startProgramView = new StartProgramView();
-       //MainMenuView mainMenuView = new MainMenuView();
+       MainMenuView mainMenuView = new MainMenuView();
        startProgramView.display();
-       //mainMenuView.display();
+       mainMenuView.display();
+       //TrailControl trailControl = new TrailControl();
+       //trailControl.randomWeather();
+       
+       
        //OregonTrail.setPlayer(player);
        
        
@@ -105,8 +110,8 @@ public class OregonTrail {
        GoldPanningView goldPanningView = new GoldPanningView();
        goldPanningView.display();
        System.out.println("HelpMenuView: ");*/
-       HelpMenuView helpMenuView = new HelpMenuView();
-       helpMenuView.display();
+       //HelpMenuView helpMenuView = new HelpMenuView();
+       //helpMenuView.display();
        /*
        System.out.println("ShopMenuView: ");
        ShopMenuView shopMenuView = new ShopMenuView();

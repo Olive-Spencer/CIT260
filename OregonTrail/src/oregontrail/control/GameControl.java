@@ -5,13 +5,17 @@
  */
 package oregontrail.control;
 
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import oregontrail.exceptions.GameControlException;
 import oregontrail.model.Actor;
 import oregontrail.model.Game;
+import oregontrail.model.Location;
 import oregontrail.model.Player;
+import oregontrail.view.GameMenuView;
 /**
  *
  * @author spencer
@@ -56,19 +60,35 @@ public class GameControl {
         return player;
     }
         
-        public static void saveGame(Game game, String filePath) throws GameControlException, IOException{
+        public static void saveGame(int location, String filePath) throws GameControlException, IOException{
             //if(game == null || filePath == null || filePath.length() < 1 )
                 //throw new GameControlException("invald entry");
             
             try (ObjectOutputStream out =
                     new ObjectOutputStream(new FileOutputStream(filePath))){
-                out.writeObject(game);
+                out.writeInt(location);
+                System.out.println(location);
             } catch (IOException ex) {
                 System.out.println("I/O Error: " + ex.getMessage());
                 
             }
-             
+        }
+        public static void loadGame(String filePath) throws GameControlException, IOException{
+            
+            try (FileInputStream input = new FileInputStream(filePath);
+            ObjectInputStream object = new ObjectInputStream(input)){
+                int locationNumber = object.readInt();
+                System.out.println(locationNumber);
+                GameMenuView.locationNumber = locationNumber;
+                
+            } catch (IOException ex) {
+                System.out.println("I/O Error: " + ex.getMessage());
+                
+            }
+                
+            }
                 
             
         }
-}
+
+

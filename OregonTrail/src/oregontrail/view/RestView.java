@@ -7,10 +7,31 @@ package oregontrail.view;
 
 /**
  *
- * @author Coby
+ * @author Spencer
  */
-public class RestView {
-    public void display(){
-        //this.console.println("RestView() class called.");
+public class RestView extends View {
+   
+    public RestView(){
+        super("\nWould you like to rest for the day? Y/N"
+             + "\nPress Q to go back to travel menu");
+    }
+   
+        
+    @Override
+    public boolean doAction(String inputs) {
+        String panChoice = inputs.toUpperCase();
+        
+        switch (panChoice)
+        {
+            case "Y": this.console.println("You decide to rest for the day. You wake up feeling refreshed and ready to continue!");
+            break;
+            case "N": this.console.println("Very well. Back to travel menu.");
+            break;
+            case "Q": return true;
+            default: this.console.println("Invalid menu item");
+        }
+       
+        return false;
+    
     }
 }

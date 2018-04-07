@@ -20,11 +20,7 @@ public class MapView extends View{
     @Override
     public String getInputs() {
         String inFile = null;
-        try {
-            inFile = this.keyboard.readLine();
-        } catch (IOException ex) {
-            Logger.getLogger(MapView.class.getName()).log(Level.SEVERE, null, ex);
-        }
+     
         boolean valid = false;
         String value = null;
         
@@ -34,6 +30,11 @@ public class MapView extends View{
             mapControl.createMap(miles);
             this.console.println("^");
             this.console.println("Press Q to return to the trail.");
+            try {
+            inFile = this.keyboard.readLine();
+        } catch (IOException ex) {
+            Logger.getLogger(MapView.class.getName()).log(Level.SEVERE, null, ex);
+        }
             value = inFile;
             value = value.trim();
             if (value.length() < 1)

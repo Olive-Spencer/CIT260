@@ -4,6 +4,7 @@
 package oregontrail.view;
 
 import java.util.Scanner;
+import oregontrail.control.GoldPanningControl;
 
 
 /**
@@ -24,7 +25,7 @@ public class GoldPanningView extends View {
         
         switch (panChoice)
         {
-            case "Y": this.console.println("Congradulations, you panned for gold and found some! You sold this gold for 100 dollars!");
+            case "Y": goldPanning();
             break;
             case "N": this.console.println("Very well. Back to travel menu.");
             break;
@@ -35,5 +36,12 @@ public class GoldPanningView extends View {
         return false;
     
     }
+    public void goldPanning(){
+        
+        GoldPanningControl gold = new GoldPanningControl();
+        gold.GoldCalc();
+        
+    
+}
 }   
 

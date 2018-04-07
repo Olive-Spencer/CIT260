@@ -21,9 +21,9 @@ public class MainMenuView extends View {
     + "\n| Main Menu                                                 |"
     + "\n-------------------------------------------------------------"
     + "\nN - Start new game"
-    + "\nR - Restart existing game"
+    
     + "\nH - Get help on how to play the game"
-    + "\nS - Shop menu test"
+    
     + "\nQ - Quit"
     + "\n-------------------------------------------------------------");
     }
@@ -36,11 +36,8 @@ public class MainMenuView extends View {
             {
                 case "N": startNewGame();
                 break;
-                case "R": restartGame();
-                break;
+               
                 case "H": getHelp();
-                break;
-                case "S": shopMenu();
                 break;
                 case "Q": return true;
                 default: this.console.println("Invalid menu item");                
@@ -54,10 +51,7 @@ public class MainMenuView extends View {
         gameMenuView.display();
     }
 
-    private static void restartGame() {
-        StartExistingGameView startExistingGameView = new StartExistingGameView();
-        startExistingGameView.display();
-    }
+    
 
     private static void getHelp() {
         HelpMenuView helpMenuView = new HelpMenuView();

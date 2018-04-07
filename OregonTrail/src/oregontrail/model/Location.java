@@ -13,23 +13,12 @@ import java.util.Objects;
  */
 public class Location {
 
-    private String name; 
-
-    public Location() {
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+    private int locationNumber; 
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 89 * hash + Objects.hashCode(this.name);
+        hash = 47 * hash + this.locationNumber;
         return hash;
     }
 
@@ -45,16 +34,21 @@ public class Location {
             return false;
         }
         final Location other = (Location) obj;
-        if (!Objects.equals(this.name, other.name)) {
+        if (this.locationNumber != other.locationNumber) {
             return false;
         }
         return true;
     }
 
-    @Override
-    public String toString() {
-        return "Location{" + "name=" + name + '}';
+    public int getLocationNumber() {
+        return locationNumber;
     }
+
+    public void setLocationNumber(int locationNumber) {
+        this.locationNumber = locationNumber;
+    }
+
+   
     
     
 }
