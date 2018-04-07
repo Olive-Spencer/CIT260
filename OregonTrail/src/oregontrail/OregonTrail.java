@@ -41,7 +41,7 @@ import oregontrail.view.RiverView;
 import oregontrail.view.TrailView;
 import oregontrail.view.LocationPrintView;
 import oregontrail.view.OccupationPrintView;
-
+import oregontrail.control.GoldPanningControl;
 
 /**
  *

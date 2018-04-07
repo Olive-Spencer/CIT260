@@ -10,7 +10,7 @@ import oregontrail.model.Location;
 
 /**
  *
- * @author spencer
+ * @author spencer, Angie
  */
 public class GoldPanningControl {
    
@@ -20,14 +20,15 @@ public class GoldPanningControl {
 
 public void GoldCalc() {
     int random = rand.nextInt(50) + 1;
-    int strength  = rand.nextInt(100)+ 1;
+    int strength  = rand.nextInt(50)+ 1;
+    int goldAmount = rand.nextInt(25)+1;
     
-    int hunt = random + strength - locationNumber;
+    int goldFound = random + strength - locationNumber;
     
-    if (hunt < 100)
-        System.out.println("\nYou hunt and use " + strength  + " strength. Unfortunately you are a poor aim and get nothing" );
+    if (goldFound < 10)
+        System.out.println("\nYou pan for gold and use " + strength  + " points of your strength. Unfortunately you have bad luck and don't find gold" );
     else
-        System.out.println("\nYou hunt and use " + strength + " strength. You find food and are able to feed your family!");
+        System.out.println("\nYou pan for gold and use " + strength + " points of your strength. Hooray!! You found " + goldAmount + " ounces of Gold!");
     
     
 
